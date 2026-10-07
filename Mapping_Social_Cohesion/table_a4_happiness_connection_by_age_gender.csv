@@ -1,0 +1,15 @@
+Gender,Age group,Happy in last 12 months (%),Isolated some of the time or often (%),Daily/weekly contact in person (%),Daily/weekly contact any mode (%)
+Males,18-24,79,65,55,94
+Males,25-34,72,57,48,90
+Males,35-44,77,56,46,90
+Males,45-54,76,46,50,90
+Males,55-64,81,36,47,85
+Males,65-74,86,31,57,89
+Males,75+,91,22,62,90
+Females,18-24,72,61,68,95
+Females,25-34,74,63,56,95
+Females,35-44,77,58,49,93
+Females,45-54,77,52,46,92
+Females,55-64,81,45,53,94
+Females,65-74,87,38,60,94
+Females,75+,96,26,68,96
