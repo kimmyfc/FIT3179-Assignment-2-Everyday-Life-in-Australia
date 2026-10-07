@@ -1,0 +1,64 @@
+Activity,Persons aged 15 to 24 years - Males - Average time spent (hh:mm),Persons aged 15 to 24 years - Females - Average time spent (hh:mm),Persons aged 15 to 24 years - Persons(b) - Average time spent (hh:mm),Persons aged 25 to 64 years - Males - Average time spent (hh:mm),Persons aged 25 to 64 years - Females - Average time spent (hh:mm),Persons aged 25 to 64 years - Persons(b) - Average time spent (hh:mm),Persons aged 15 to 64 years - Males - Average time spent (hh:mm),Persons aged 15 to 64 years - Females - Average time spent (hh:mm),Persons aged 15 to 64 years - Persons(b) - Average time spent (hh:mm),Persons aged 65 years and over - Males - Average time spent (hh:mm),Persons aged 65 years and over - Females - Average time spent (hh:mm),Persons aged 65 years and over - Persons(b) - Average time spent (hh:mm),Total - Males - Average time spent (hh:mm),Total - Females - Average time spent (hh:mm),Total - Persons(b) - Average time spent (hh:mm)
+Personal care for self,647,672,659,614,631,623,621,638,630,690,699,694,634,651,643
+Personal care for self activities(c),647,672,659,614,631,623,621,638,630,690,699,694,634,651,643
+Sleeping,546,549,548,518,521,520,524,526,525,543,540,541,528,529,528
+Eating and drinking,57,55,56,55,54,55,55,55,55,94,89,91,63,62,62
+Personal hygiene and care,42,62,52,37,46,41,38,49,43,38,51,45,38,49,44
+Health and medical care for self,1,3,2,3,6,5,3,6,4,11,13,12,4,7,6
+Travel related to personal care for self,1,2,1,1,2,1,1,2,1,3,4,3,1,2,2
+Employment and education,351,346,349,344,252,297,345,269,307,52,26,38,288,218,252
+Employment activities(c),193,171,182,333,236,284,305,224,264,49,24,36,255,182,218
+Paid work and employment,170,151,161,297,216,256,272,204,238,43,19,31,227,165,195
+Travel related to own employment,21,19,20,35,20,28,32,20,26,5,4,5,27,17,22
+Education activities(c),158,176,167,11,16,13,40,45,43,3,2,3,33,36,35
+Education and study,151,167,159,11,15,13,39,43,41,3,2,3,32,35,33
+Travel related to own education,7,8,7,0,1,0,1,2,2,0,0,0,1,2,1
+Unpaid work,77,95,86,196,293,245,173,256,214,254,290,273,188,263,226
+Domestic activities(c),59,78,69,129,178,154,115,160,138,217,248,233,135,179,157
+Cooking and food/drink preparation,20,24,22,40,56,48,36,50,43,50,72,61,38,55,47
+Housework,17,24,20,33,62,48,30,55,43,40,86,64,32,62,47
+Shopping and purchasing goods,7,11,9,14,21,17,13,19,16,24,26,25,15,20,18
+"Gardening, watering and grounds care",3,1,2,15,9,12,12,8,10,47,28,37,19,12,15
+"Pet care (feeding, walking, playing)",2,5,3,5,9,7,4,8,6,7,11,9,5,8,7
+"Administration (banking, bills, mail, planning)",1,1,1,4,6,5,4,5,4,11,7,9,5,5,5
+Home and vehicle maintenance,2,3,2,10,4,7,8,3,6,19,3,11,10,3,7
+Travel related to domestic activities,7,9,8,9,10,9,8,10,9,17,13,15,10,11,10
+Looking after children (14 years and under)(c),3,7,5,55,93,74,45,77,61,9,16,13,38,64,51
+Personal care for child,0,1,1,13,24,19,11,20,15,0,1,1,9,16,12
+Health and medical care for child,0,0,0,0,1,1,0,1,1,0,0,0,0,1,1
+"Playing, reading or homework with child",1,1,1,12,19,15,10,15,13,1,3,2,8,13,10
+Cooking and food/drink preparation for child,0,1,1,6,13,9,5,11,8,0,1,1,4,9,6
+Supervising or watching child,0,2,1,12,17,14,10,14,12,3,5,4,8,12,10
+Accompanying child to activities,1,0,1,5,7,6,4,6,5,1,1,1,4,5,4
+Talking and emotional support for child,0,0,0,2,4,3,1,3,2,0,0,0,1,2,2
+Travel related to looking after children,1,0,1,5,10,7,4,8,6,2,4,3,4,7,5
+Caring and support (15 years and over),8,7,8,8,16,12,8,15,11,17,16,16,9,15,12
+Personal care for adult,0,0,0,1,3,2,1,2,2,4,4,4,2,3,2
+Medical appointments for adult care,0,0,0,1,1,1,1,1,1,2,1,2,1,1,1
+Cooking and food/drink preparation for adult care,0,0,0,1,2,2,1,2,1,2,2,2,1,2,2
+Household tasks for adult care,0,0,0,1,1,1,0,1,1,1,1,1,1,1,1
+Forms and administration for adult care,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Emotional support, calling, visiting for adult care",0,0,0,1,3,2,1,2,1,2,3,2,1,2,2
+Travel related to caring and support for adult,6,7,6,2,3,2,3,4,3,2,3,3,3,3,3
+Other caring and support for adults,0,0,0,1,3,2,1,3,2,3,2,2,2,2,2
+Volunteering activities(c),7,2,5,4,5,5,5,4,5,11,11,11,6,6,6
+Volunteering,6,2,4,4,4,4,4,4,4,11,10,10,6,5,5
+Travel related to volunteering,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Free time,352,315,334,273,249,261,289,261,275,430,409,419,317,293,304
+Free time activities(c),352,315,334,273,249,261,289,261,275,430,409,419,317,293,304
+Watching TV or streaming,72,75,73,98,85,92,93,83,88,198,172,184,114,102,108
+"Checking emails, social media, browsing",19,38,28,16,19,18,17,23,20,27,18,22,19,22,20
+Playing video or mobile games,78,18,49,24,6,14,34,8,21,5,4,4,29,7,18
+"Phone, video calls and texting",9,14,11,4,7,5,5,8,7,5,12,9,5,9,7
+Talking and socialising (in person),43,53,48,32,36,34,34,40,37,37,47,42,34,41,38
+Relaxing,29,27,28,19,14,17,21,17,19,27,22,24,22,18,20
+Going for a walk,5,8,7,9,10,9,8,10,9,18,14,16,10,11,10
+Exercise and sport,39,17,28,20,15,18,24,15,20,19,14,17,23,15,19
+Reading,4,10,7,6,12,9,6,12,9,28,38,33,10,17,14
+Hobbies and arts,21,14,18,15,12,14,16,13,15,23,25,24,18,15,16
+"Listening to music, radio or podcast",5,7,6,3,3,3,3,3,3,7,6,7,4,4,4
+Prayer and religion,4,4,4,4,4,4,4,4,4,4,7,5,4,5,4
+Attendance at sports or cultural venues,7,7,7,5,4,4,5,5,5,4,4,4,5,4,5
+Travel related to free time,16,21,19,17,18,18,17,19,18,24,23,23,18,19,19
+Total activities(d),1440,1440,1440,1440,1440,1440,1440,1440,1440,1440,1440,1440,1440,1440,1440
+Persons aged 15 years and over,1740.85,1628.044,3360.459,6914.908,7120.163,14042.827,8652.234,8745.907,17408.339,2101.918,2358.051,4465.924,10752.662,11106.808,21866.651

@@ -1,0 +1,64 @@
+Activity,Persons aged 15 to 24 years - Males - Average time spent (hh:mm),Persons aged 15 to 24 years - Females - Average time spent (hh:mm),Persons aged 15 to 24 years - Persons(b) - Average time spent (hh:mm),Persons aged 25 to 64 years - Males - Average time spent (hh:mm),Persons aged 25 to 64 years - Females - Average time spent (hh:mm),Persons aged 25 to 64 years - Persons(b) - Average time spent (hh:mm),Persons aged 15 to 64 years - Males - Average time spent (hh:mm),Persons aged 15 to 64 years - Females - Average time spent (hh:mm),Persons aged 15 to 64 years - Persons(b) - Average time spent (hh:mm),Persons aged 65 years and over - Males - Average time spent (hh:mm),Persons aged 65 years and over - Females - Average time spent (hh:mm),Persons aged 65 years and over - Persons(b) - Average time spent (hh:mm),Total - Males - Average time spent (hh:mm),Total - Females - Average time spent (hh:mm),Total - Persons(b) - Average time spent (hh:mm)
+Personal care for self,647,672,659,614,631,623,621,638,630,690,699,694,634,651,643
+Personal care for self activities(c),647,672,659,614,631,623,621,638,630,690,699,694,634,651,643
+Sleeping,546,549,548,518,521,520,524,526,525,543,540,541,528,529,528
+Eating and drinking,77,69,73,77,73,75,77,72,75,110,105,107,85,80,82
+Personal hygiene and care,56,72,64,52,57,55,53,60,57,52,61,57,53,60,57
+Health and medical care for self,35,28,30,47,50,49,45,46,46,48,49,48,46,47,47
+Travel related to personal care for self,61,56,57,47,51,50,49,52,51,59,56,57,53,53,53
+Employment and education,483,456,470,545,482,516,531,476,505,407,322,372,525,470,500
+Employment activities(c),483,431,458,550,492,524,541,482,514,425,368,403,535,478,510
+Paid work and employment,463,425,445,507,462,487,501,456,481,410,383,401,497,454,478
+Travel related to own employment,72,61,66,93,67,82,90,66,79,92,96,94,90,67,80
+Education activities(c),391,368,379,226,228,227,338,314,325,145,115,129,330,307,317
+Education and study,377,351,364,221,220,220,327,301,313,145,114,129,320,294,306
+Travel related to own education,81,72,76,80,83,82,81,75,77,57,30,51,80,75,77
+Unpaid work,127,133,130,236,318,279,219,290,257,280,303,292,232,293,265
+Domestic activities(c),113,121,117,169,202,187,161,190,177,243,261,253,180,207,195
+Cooking and food/drink preparation,59,54,57,71,79,76,70,76,73,77,89,84,72,79,76
+Housework,87,86,86,94,108,103,93,106,101,85,117,105,91,109,102
+Shopping and purchasing goods,77,77,77,81,76,78,81,76,78,81,86,84,81,78,79
+"Gardening, watering and grounds care",116,55,95,122,86,105,122,85,104,131,97,115,126,90,109
+"Pet care (feeding, walking, playing)",37,42,40,49,49,49,47,48,48,57,61,59,50,51,51
+"Administration (banking, bills, mail, planning)",57,44,50,71,56,61,70,55,60,79,58,68,73,56,63
+Home and vehicle maintenance,102,162,130,138,105,127,136,111,127,130,76,116,134,101,123
+Travel related to domestic activities,69,58,63,64,57,60,64,57,60,66,60,63,65,58,61
+Looking after children (14 years and under)(c),140,183,166,211,276,248,209,273,246,160,211,190,206,269,242
+Personal care for child,44,109,90,86,100,95,86,100,95,45,96,84,85,100,95
+Health and medical care for child,30,71,55,112,61,70,103,62,69,0,77,77,103,62,69
+"Playing, reading or homework with child",142,124,130,115,118,117,116,118,117,106,111,109,115,118,117
+Cooking and food/drink preparation for child,112,88,97,64,73,70,65,73,70,61,79,74,65,73,70
+Supervising or watching child,111,201,193,162,159,160,161,160,161,144,164,156,160,160,160
+Accompanying child to activities,540,100,296,123,111,115,127,110,117,117,108,113,126,110,117
+Talking and emotional support for child,0,69,69,58,54,55,58,54,55,159,46,69,60,54,56
+Travel related to looking after children,55,45,51,52,61,57,52,60,57,76,95,87,54,63,60
+Caring and support (15 years and over),66,75,70,118,131,127,101,122,114,151,144,148,114,127,122
+Personal care for adult,0,30,30,90,84,86,90,84,85,117,123,120,103,93,96
+Medical appointments for adult care,96,148,120,119,82,96,116,86,98,113,118,115,115,95,104
+Cooking and food/drink preparation for adult care,42,36,40,69,75,73,67,74,72,79,75,76,70,74,73
+Household tasks for adult care,124,0,124,85,85,85,88,85,86,87,61,75,88,80,83
+Forms and administration for adult care,92,20,75,46,59,56,67,56,59,50,46,47,64,54,57
+"Emotional support, calling, visiting for adult care",96,74,85,86,88,87,86,88,87,108,97,101,94,90,91
+Travel related to caring and support for adult,56,73,63,66,63,64,61,66,64,58,84,72,60,68,65
+Other caring and support for adults,100,0,100,100,119,113,100,119,113,121,62,89,107,104,106
+Volunteering activities(c),304,227,280,215,180,195,234,184,207,197,186,191,219,185,201
+Volunteering,276,198,251,207,174,189,221,176,198,194,178,185,210,177,193
+Travel related to volunteering,190,56,118,48,42,45,75,45,60,43,43,43,67,45,55
+Free time,378,343,361,309,280,294,323,292,307,442,422,431,348,321,334
+Free time activities(c),378,343,361,309,280,294,323,292,307,442,422,431,348,321,334
+Watching TV or streaming,166,152,159,168,145,156,167,147,157,238,208,222,186,164,175
+"Checking emails, social media, browsing",91,106,100,83,72,76,85,80,82,103,74,88,89,78,83
+Playing video or mobile games,236,145,212,184,102,159,205,116,179,115,74,91,200,109,170
+"Phone, video calls and texting",81,85,84,62,54,56,68,61,63,49,56,53,63,59,60
+Talking and socialising (in person),169,144,155,143,135,139,149,137,142,131,129,130,145,135,139
+Relaxing,133,111,122,125,94,109,127,98,113,135,108,120,129,100,114
+Going for a walk,73,69,70,68,68,68,69,68,68,73,66,69,70,67,69
+Exercise and sport,132,93,118,105,82,94,112,84,100,120,87,102,114,85,100
+Reading,83,81,81,77,84,81,78,83,81,117,104,109,95,92,93
+Hobbies and arts,190,126,159,171,136,153,175,134,154,170,136,150,174,134,153
+"Listening to music, radio or podcast",70,87,79,87,70,78,81,76,78,103,88,95,88,79,83
+Prayer and religion,94,102,98,95,85,89,95,88,91,85,90,88,93,88,90
+Attendance at sports or cultural venues,192,177,184,186,155,170,188,160,173,154,136,144,181,155,168
+Travel related to free time,88,89,89,107,85,94,103,86,93,101,89,94,103,86,93
+Total activities(d),1440,1440,1440,1440,1440,1440,1440,1440,1440,1440,1440,1440,1440,1440,1440
+Persons aged 15 years and over,1740.85,1628.044,3360.459,6914.908,7120.163,14042.827,8652.234,8745.907,17408.339,2101.918,2358.051,4465.924,10752.662,11106.808,21866.651

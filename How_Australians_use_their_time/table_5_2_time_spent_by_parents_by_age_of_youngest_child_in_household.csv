@@ -1,0 +1,51 @@
+Activities,Youngest child in household aged under 1 year - Male parents - Proportion (%),Youngest child in household aged under 1 year - Female parents - Proportion (%),Youngest child in household aged under 1 year - Total parents(b) - Proportion (%),Youngest child in household aged 1 year - Male parents - Proportion (%),Youngest child in household aged 1 year - Female parents - Proportion (%),Youngest child in household aged 1 year - Total parents(b) - Proportion (%),Youngest child in household aged 2 to 4 years - Male parents - Proportion (%),Youngest child in household aged 2 to 4 years - Female parents - Proportion (%),Youngest child in household aged 2 to 4 years - Total parents(b) - Proportion (%),Youngest child in household aged 5 to 11 years - Male parents - Proportion (%),Youngest child in household aged 5 to 11 years - Female parents - Proportion (%),Youngest child in household aged 5 to 11 years - Total parents(b) - Proportion (%),Youngest child in household aged 12 to 14 years - Male parents - Proportion (%),Youngest child in household aged 12 to 14 years - Female parents - Proportion (%),Youngest child in household aged 12 to 14 years - Total parents(b) - Proportion (%),Total parents - Male parents - Proportion (%),Total parents - Female parents - Proportion (%),Total parents - Total parents(b) - Proportion (%),Non-parents - Males - Proportion (%),Non-parents - Females - Proportion (%),Non-parents - Persons(b) - Proportion (%)
+Personal care for self,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100
+Personal care for self activities(c),100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100
+Sleeping,100,100,100,100,100,100,100,100,99.9,100,100,100,100,100,100,99.9,100,100,100,100,100
+Eating and drinking,61.3,71.6,67.1,64.1,63.4,63,62.1,65.7,63.9,67,63.8,65.6,78.8,69.6,73.6,66.3,66.4,66.4,76.6,80.7,78.6
+Personal hygiene and care,73.7,74.3,72,63.6,79.9,71.3,63,74.4,68.3,67.8,74.4,71.3,76.1,80.5,79.1,67.8,75.7,71.9,72.9,83.8,78.4
+Health and medical care for self,2.4,8,5.4,4.5,8.7,6.1,3,9.4,5.9,6.7,7.9,7.1,5.9,10.9,9.2,4.5,8.8,6.7,10.9,17.2,14.1
+Travel related to personal care for self,0,1.6,0.8,0,0,0.5,0.8,5.3,2.9,2.2,2.3,2,2.6,3.6,3.3,1.5,2.8,2.1,2.5,4.5,3.5
+Employment and education,66.8,19.8,41.6,69.2,42.5,55.7,68.4,49.3,58.8,68,53.1,59.8,68.4,54.9,60.7,68.2,47.5,57.3,51.1,45.9,48.5
+Employment activities(c),67.4,12.6,37.2,69.3,38.2,51.3,66.3,43.3,54.6,65.2,49.5,57.3,66.8,52.7,58.6,65.5,43.5,54.1,42.5,36.4,39.4
+Paid work and employment,63.8,12.4,35.9,65.4,38.2,50.7,65.4,41.8,52.9,63,48.7,55.7,63.7,51.4,57.1,63.5,42.5,52.7,40.5,34.3,37.4
+Travel related to own employment,52.1,5.7,26.4,40.4,20.5,29.2,39.4,26.8,33.1,39.1,27.8,33.3,38.2,34.5,36.6,40.2,25,32.3,27.4,24.7,26
+Education activities(c),5.1,5.8,4.9,4.6,8.5,5.3,6.2,7.1,6.2,3.9,5,4.6,3.8,6.1,4.7,4.4,6.1,5.3,11.6,13.6,12.6
+Unpaid work,96.3,98.4,96.3,90.6,98.6,94.1,94.7,99.7,96.9,92.4,98.8,95.4,84.2,98.1,92.4,91.7,98.9,95.5,78,87.2,82.7
+Domestic activities(c),75,91.4,83.5,72.6,86.2,78.6,75.4,88.2,81,76.1,90.3,83.3,76.4,96.2,88.2,74.9,90.8,83.2,75,85.1,80.1
+Cooking and food/drink preparation,57,71,63.7,50.5,61.7,56.2,58.2,69.5,63.6,54.5,75.6,65.5,50.8,82.6,70.1,54.3,74.1,64.7,53.7,67.6,60.7
+Housework,37.3,69,53.1,36.7,61,48.7,34.4,60.6,48.1,37.9,64.9,51.7,41.8,73.3,60.4,37.1,65.8,52.2,34.1,54.1,44.2
+Shopping and purchasing goods,13.2,25.3,19.8,10.5,23.2,16.9,14.9,26.3,20.7,14.6,28,21.4,21.2,35.4,29,14.7,28,21.7,19.3,25.2,22.3
+"Gardening, watering and grounds care",10.2,7.2,9.1,3.8,4.7,3.7,6.5,6.2,6.2,11.5,7.7,9.3,11.4,13.2,12.1,9.4,7.7,8.5,16.7,14.7,15.7
+"Pet care (feeding, walking, playing)",4.3,12.4,9.5,4.3,10.4,7.2,5.4,7.1,6.6,7,14.4,10.9,6.9,17.7,14.4,6.5,13,9.8,10.2,17.8,14
+"Administration (banking, bills, mail, planning)",3.8,9.7,7.5,3.9,7.2,5,5.1,8.5,6.6,5.9,12.1,9.1,7.6,15.6,12.5,5.5,11.4,8.5,7.5,8.9,8.2
+Home and vehicle maintenance,5.9,0,3.1,3.6,2.3,3.8,6.5,2.8,4.9,7,2.8,5.1,8.2,6.6,7.3,6.8,3.1,4.9,7.8,3.5,5.6
+Travel related to domestic activities,9.4,22.4,16.4,7.2,10.9,9.7,10.1,19.3,14.9,11.7,15.6,13.6,10.6,17.3,15.5,10.7,17.4,14.1,16.8,18.9,17.8
+Looking after children (14 years and under)(c),87.9,97.3,91.6,81.1,97.6,88.1,83.6,96.3,90.4,70.5,87.8,79.2,39.9,65,54.1,72.2,88,80.3,3,4.1,3.6
+Personal care for child,63.2,85.7,75,60.8,88.6,73.3,62.5,85,73.6,36.1,59.4,47.9,4,17.7,11.9,43.7,64.2,54.3,0.5,0.9,0.7
+Health and medical care for child,1,6.4,3,1.1,7.1,4.3,1.4,4.4,3.5,0.6,4.2,2.7,2.9,3.4,3.5,1.3,5,3.1,0,0.1,0.1
+"Playing, reading or homework with child",36,65.8,50.5,40.3,59.9,47.9,42.3,55.3,49.2,24.6,35.9,30.7,6,14.1,10,29,42.5,36,0.8,1.2,1
+Cooking and food/drink preparation for child,25.8,72,50.1,33.4,66.9,50,31.3,52.1,41.3,21.9,42.1,32.4,12.1,27.4,20.6,24.5,47.9,36.7,0.5,0.9,0.7
+Supervising or watching child,34.4,54.1,43.5,28,42.2,34.1,22.9,35.5,29.8,18.5,18,18.1,6.6,6.3,5.7,20.5,26.5,23.7,0.9,1.8,1.3
+Accompanying child to activities,3.9,13,8.1,9.7,17.9,13,13.5,18.2,16,13.6,19.3,16.7,5.5,6.1,5.7,10.7,16.2,13.6,0.5,0.5,0.5
+Talking and emotional support for child,7.6,24,16,7.2,14.6,11.4,8.2,14.8,11.2,8,19.5,13.8,4.6,14.3,9.9,7.2,17.6,12.6,0.2,0.3,0.2
+Travel related to looking after children,13.2,23.7,18.4,21.2,39.9,29.6,32,45.7,37.9,31.9,50.7,41.8,17.5,33.5,26.3,26.5,42.2,34.7,1.6,1.8,1.7
+Caring and support (15 years and over)(c),6,4.5,5.9,2.2,5.3,3.5,3.2,5.6,4.9,6.5,13.4,10.1,14.9,28,22.4,6.2,12.6,9.5,8.8,11.5,10.2
+Volunteering activities(c),0,1.1,0.4,0,0,0.7,0.8,1.5,1.4,2.8,4.1,3.2,2.8,4.4,4.1,1.9,2.8,2.2,3,3.2,3.1
+Free time,77.2,79.8,79.5,83.3,85.8,83.4,78.4,78.7,78.1,82.5,81.2,81.7,94.3,85.8,89,82.2,81.9,81.9,93.5,93.9,93.7
+Free time activities(c),77.2,79.8,79.5,83.3,85.8,83.4,78.4,78.7,78.1,82.5,81.2,81.7,94.3,85.8,89,82.2,81.9,81.9,93.5,93.9,93.7
+Watching TV or streaming,45,50.2,47.4,43.7,50.8,46,44.3,42.6,43,52.6,48.1,49.9,70.8,57.1,62.5,50.5,49.3,49.9,64,66.5,65.3
+"Checking emails, social media, browsing",10.8,23.4,18.4,9.8,19.3,14.5,11,19.7,15.9,15.9,23.4,20,25.1,23.5,24.2,15.1,22.3,18.8,22.7,29.5,26.1
+Playing video or mobile games,9,1.1,6.8,12.1,0,5.6,6.3,3.1,5.2,8.3,4.9,6.9,6.8,6,6.6,8.3,4.1,6.2,16.1,7.4,11.6
+"Phone, video calls and texting",6.1,9.8,7.8,1.5,8.4,4.7,3.1,7.6,5.7,6.2,9.8,8.2,1.6,11.9,7.5,4.2,9.4,7,8.7,17.1,13
+Talking and socialising (in person),22.5,29.6,25.3,14.4,20.1,17.8,18.3,22.3,19.9,19.7,23,21.4,16.9,24.5,21.7,18.6,23.4,21.2,25.1,32.5,28.9
+Relaxing,10.2,13.7,11.9,10.7,13.2,12.2,10.2,10.4,10.4,16.2,14.8,15.5,11.7,13,13.6,12.7,13.6,13.2,18.6,18.9,18.7
+Going for a walk,8.7,16.1,13.2,8.6,10.4,9.2,6.9,9.7,8,9.5,10.9,10.2,13.7,11.1,12.9,9.5,11.3,10.4,15.5,17,16.2
+Exercise and sport,13.4,16.7,14.3,24.7,8.7,16.1,19.9,11.6,15.8,17.1,18.3,17.4,22,17,19.7,18.6,15.6,16.9,20.9,18.2,19.5
+Reading,3.7,6,5.8,2.1,7.3,5.4,3.6,9.3,6.7,3.5,11.3,7.3,10.4,12.9,11.8,4.3,10.2,7.5,12.6,21.2,16.9
+Hobbies and arts,6.3,4.2,4.1,6.2,6.6,6.7,6.1,3.3,4.8,6.8,7.3,7.1,5.6,8.9,7.4,6.6,6.3,6.4,11.2,12.9,12.1
+"Listening to music, radio or podcast",1.4,1.1,1.4,0.5,1.4,0.7,1,1.6,1.5,2.4,1.8,1.8,3.3,3.4,2.8,1.6,1.9,1.8,5.3,5.8,5.5
+Prayer and religion,3.2,3.1,2.8,2.2,4.2,2.8,3.2,2.6,2.6,6.7,6.5,6.6,8.3,3.6,7,5.3,4.5,5,3.4,5.4,4.4
+Attendance at sports or cultural venues,0,2.1,1.3,3.3,1.2,2.6,2.5,2.4,1.7,1.6,3.1,2.8,6.4,2.1,3.3,2.2,2.6,2.5,2.7,2.9,2.8
+Travel related to free time,16,20.3,17.7,12.7,20.9,16.2,14.7,19.1,16.8,10.4,17.9,14.1,13.1,15.9,14.9,12.5,18.6,15.7,19.6,23.8,21.7
+Total activities(d),100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100

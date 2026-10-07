@@ -1,0 +1,51 @@
+Category,Characteristic,Whether did unpaid voluntary work through an organisation in last 12 months - Did unpaid voluntary work through an organisation - Relative Standard Error of Estimate (%),Whether did unpaid voluntary work through an organisation in last 12 months - Did not do unpaid voluntary work through an organisation - Relative Standard Error of Estimate (%),Whether did informal volunteering in last 4 weeks - Has undertaken informal volunteering in last 4 weeks - Relative Standard Error of Estimate (%),Whether did informal volunteering in last 4 weeks - Has not undertaken informal volunteering in last 4 weeks - Relative Standard Error of Estimate (%),Whether provided unpaid work/support to non-household members in last 4 weeks - Provided unpaid work/support to non-household members in last 4 weeks - Relative Standard Error of Estimate (%),Whether provided unpaid work/support to non-household members in last 4 weeks - Did not provide unpaid work/support to non-household members in last 4 weeks - Relative Standard Error of Estimate (%),Whether provided unpaid work/support to non-household members in last 4 weeks - Total persons - Relative Standard Error of Estimate (%)
+Men,15-24,18.8,4.1,16,4,13.8,5.8,1.6
+Men,25-34,19.9,3.8,11.1,5.8,7.7,6.9,1.5
+Men,35-44,10.6,3.6,10.5,5.6,8.9,7.7,1.3
+Men,45-54,12.2,5.5,10.5,5.3,7.9,7.1,1.5
+Men,55-64,12.9,3.8,11.8,3.8,6.7,7,1
+Men,65 years and over,8.8,3.1,7.8,2.7,3.9,3.2,0.4
+Women,15-24,19.3,4.7,14.3,6.6,12.9,7.6,3.3
+Women,25-34,15.7,2.9,13.2,6.3,10.7,8.7,1.6
+Women,35-44,9.1,4.1,9.3,5.8,6.7,6.7,0.9
+Women,45-54,13.1,4.9,10.9,5.4,7,7.6,1.4
+Women,55-64,10.1,4.3,8.4,3.7,5,6.1,1.6
+Women,65 years and over,7.3,2.6,5.7,2.1,4.2,3.9,0.4
+Persons(a),15-24,14.6,2.9,10.9,3.3,9.5,4.3,0.2
+Persons(a),25-34,13,2,7.3,3.5,6.2,5.1,0.1
+Persons(a),35-44,6.9,2.6,6.8,3.9,5.3,4.9,0.1
+Persons(a),45-54,8.2,3.2,7.1,3.5,5.6,5.5,0.1
+Persons(a),55-64,7.7,2.6,7.1,2.5,3.6,4,0.1
+Persons(a),65 years and over,5.8,2,4.3,1.5,3,2.6,0
+Employed,Full-time,4.9,2.6,4.7,3,4,3.8,2.2
+Employed,Part-time,7.2,4.7,7,5.1,4.9,6.3,3.7
+Employed,Unemployed,35.8,14.1,29.1,13.3,21.4,15.5,12.5
+Employed,Not in the labour force,6,2.9,5.6,2.8,3.8,3.5,2.1
+Current study status,Currently studying,11.7,4.9,10.1,4.9,9.5,5.9,3.9
+Current study status,Not studying,3.3,1.3,3.3,1.7,2.1,2,0.7
+Level of highest non-school qualification,Bachelor Degree or above,4.8,3.8,4.9,4,4.1,4.8,2.7
+Level of highest non-school qualification,Advanced Diploma/Diploma or below,6.1,3.7,4.9,3.7,3.8,4.8,2.9
+Level of highest non-school qualification,No non-school qualification,7.6,2.8,7.1,2.9,5.3,3.6,2.4
+Languages spoken at home,English only,3.5,1.4,3.5,1.7,2.5,2.5,0.9
+Languages spoken at home,Language other than English,8,3.9,7.7,4.7,6.6,5.3,3
+Living situation,Parent in couple with children under 15,6.2,3.7,6,3.9,4.5,4.9,1.7
+Living situation,Parent in couple with youngest child 15 years and over,14.4,5.8,16,6.3,9.3,8.6,5.3
+Living situation,Lone parent with children under 15,25.3,10.2,18.8,9.3,15.1,12.2,8.9
+Living situation,Lone parent with youngest child 15 years and over,20.8,12.2,17.8,12.3,12.9,14.8,9.3
+Living situation,In couple with no children,5.7,2.4,4.7,2.6,3.6,4.2,1.8
+Living situation,Non-dependent child (15 years and over),18.1,6.8,13.9,8,11.8,8.4,5.7
+Living situation,Dependent student 15 to 24 years,17.6,7.8,17.8,6.3,14.2,7.2,4.8
+Living situation,Lone person 15 to 64 years,9.8,3.6,8.1,5.2,6.4,7.1,3.1
+Living situation,Lone person 65 years and over,8,4.1,8,4.6,6.7,5.1,4.2
+Living situation,Other,20.1,10.1,15.4,9.4,15.7,10.6,9.2
+Main Source of Household Income,Employee income,4.1,1.4,4,2,3.1,2.7,1
+Main Source of Household Income,Unincorporated business income,14.8,15.5,14.5,15.6,14.4,18.7,10.4
+Main Source of Household Income,Government pensions and allowances,7.9,4.5,7.8,4.1,5.8,5.1,3.9
+Main Source of Household Income,Other income,8,6,7.6,5.5,5.1,6.8,3.9
+Current weekly household equivalised gross income quintiles,Lowest quintile,9.1,3.9,8.2,4.2,6.6,4.7,3.2
+Current weekly household equivalised gross income quintiles,Second quintile,7.9,4.8,8.2,4.8,6.2,6,3.8
+Current weekly household equivalised gross income quintiles,Third quintile,7.9,4.7,8.4,4.9,5.9,5.6,3.7
+Current weekly household equivalised gross income quintiles,Fourth quintile,9.1,4.7,7.6,5.1,6.2,6.1,3.8
+Current weekly household equivalised gross income quintiles,Highest quintile,7.7,5.3,7.1,7,5.1,9,4.5
+Current weekly household equivalised gross income quintiles,Government support has been the main source of income in last 2 years,7.7,3.2,7.4,3.2,5,4.2,2.8
+Current weekly household equivalised gross income quintiles,Persons aged 15 years and over(b),3.3,1,3.3,1.4,2.3,1.9,0

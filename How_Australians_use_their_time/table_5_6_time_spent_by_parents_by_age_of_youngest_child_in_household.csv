@@ -1,0 +1,51 @@
+Activities,Youngest child in household aged under 1 year - Male parents - minutes,Youngest child in household aged under 1 year - Female parents - minutes,Youngest child in household aged under 1 year - Total parents(b) - minutes,Youngest child in household aged 1 year - Male parents - minutes,Youngest child in household aged 1 year - Female parents - minutes,Youngest child in household aged 1 year - Total parents(b) - minutes,Youngest child in household aged 2 to 4 years - Male parents - minutes,Youngest child in household aged 2 to 4 years - Female parents - minutes,Youngest child in household aged 2 to 4 years - Total parents(b) - minutes,Youngest child in household aged 5 to 11 years - Male parents - minutes,Youngest child in household aged 5 to 11 years - Female parents - minutes,Youngest child in household aged 5 to 11 years - Total parents(b) - minutes,Youngest child in household aged 12 to 14 years - Male parents - minutes,Youngest child in household aged 12 to 14 years - Female parents - minutes,Youngest child in household aged 12 to 14 years - Total parents(b) - minutes,Total parents - Male parents - minutes,Total parents - Female parents - minutes,Total parents - Total parents(b) - minutes,Non-parents - Males - minutes,Non-parents - Females - minutes,Non-parents - Persons(b) - minutes
+Personal care for self,570,578,574,578,581,579,587,603,595,595,595,595,623,611,616,592,596,594,646,668,657
+Personal care for self activities(c),570,578,574,578,581,579,587,603,595,595,595,595,623,611,616,592,596,594,646,668,657
+Sleeping,497,496,496,503,503,503,511,520,515,505,511,508,513,505,508,506,510,508,534,535,534
+Eating and drinking,39,44,42,41,39,40,44,39,42,48,39,43,65,52,57,48,42,44,67,68,68
+Personal hygiene and care,33,34,33,32,37,35,31,38,34,34,39,36,41,43,42,34,38,36,39,53,46
+Health and medical care for self,1,2,2,1,2,1,2,3,2,6,5,5,3,9,7,3,5,4,5,8,6
+Travel related to personal care for self,0,1,1,0,0,0,0,2,1,1,1,1,1,2,1,1,1,1,1,2,2
+Employment and education,395,56,219,386,198,294,370,216,292,376,240,306,349,259,297,374,212,290,263,219,241
+Employment activities(c),384,49,210,379,184,284,358,203,280,366,231,296,343,253,291,364,203,280,224,175,199
+Paid work and employment,331,45,182,344,170,259,320,187,253,326,215,269,306,235,265,325,188,253,199,158,178
+Travel related to own employment,52,5,27,34,14,24,38,16,27,39,16,28,37,17,25,40,15,27,24,17,20
+Education activities(c),11,7,9,7,14,10,11,13,12,11,9,10,6,6,6,10,10,10,40,44,42
+Unpaid work,310,629,476,289,489,387,318,458,389,265,416,343,197,341,280,276,444,364,163,208,186
+Domestic activities(c),128,177,153,91,137,113,107,153,130,123,190,158,134,234,192,118,182,151,140,177,159
+Cooking and food/drink preparation,40,50,45,33,46,39,39,52,46,37,65,52,40,78,62,38,61,50,39,53,46
+Housework,36,82,60,33,59,46,33,63,48,35,74,55,43,86,68,35,73,55,31,58,45
+Shopping and purchasing goods,12,17,14,9,15,12,10,18,14,12,20,16,12,30,22,11,20,16,16,20,18
+"Gardening, watering and grounds care",13,7,10,3,3,3,9,5,7,12,6,9,12,10,11,10,6,8,21,14,17
+"Pet care (feeding, walking, playing)",4,4,4,2,4,3,2,2,2,3,5,4,2,6,5,3,4,3,5,10,8
+"Administration (banking, bills, mail, planning)",5,5,5,2,3,2,2,3,3,4,7,6,6,7,7,4,6,5,6,5,5
+Home and vehicle maintenance,6,1,4,5,2,3,6,2,4,11,3,7,13,7,9,9,3,6,11,4,7
+Travel related to domestic activities,11,10,11,5,6,5,6,8,7,8,8,8,5,9,7,7,8,8,11,11,11
+Looking after children (14 years and under)(c),177,447,317,196,347,270,204,298,252,133,201,168,45,75,62,150,245,199,6,9,7
+Personal care for child,53,134,95,53,101,77,59,84,72,26,44,35,2,8,6,37,63,50,1,1,1
+Health and medical care for child,0,3,2,4,3,4,1,2,2,1,3,2,1,2,2,1,3,2,0,0,0
+"Playing, reading or homework with child",36,99,69,47,74,60,52,69,61,26,35,31,7,13,10,33,50,42,1,1,1
+Cooking and food/drink preparation for child,15,80,49,24,46,34,20,35,27,13,26,20,8,15,12,16,34,25,0,1,1
+Supervising or watching child,62,90,76,45,76,60,36,56,46,26,25,26,10,5,7,33,41,37,2,3,2
+Accompanying child to activities,4,12,8,9,20,14,16,18,17,18,24,21,5,6,5,13,18,15,1,1,1
+Talking and emotional support for child,2,17,10,6,5,6,4,8,6,4,10,7,3,8,6,4,9,7,0,0,0
+Travel related to looking after children,5,12,9,9,22,15,16,26,21,18,33,26,8,19,14,14,26,20,1,1,1
+Caring and support (15 years and over)(c),5,4,4,2,4,3,4,5,4,5,18,12,15,24,20,5,13,9,11,15,13
+Volunteering activities(c),1,1,1,0,1,1,3,2,3,4,6,5,4,7,6,3,4,4,7,6,7
+Free time,151,157,154,181,162,172,152,149,151,190,175,182,253,216,231,184,173,178,354,329,342
+Free time activities(c),151,157,154,181,162,172,152,149,151,190,175,182,253,216,231,184,173,178,354,329,342
+Watching TV or streaming,47,48,47,44,51,47,53,41,47,67,55,61,112,83,96,65,56,60,128,116,122
+"Checking emails, social media, browsing",8,13,11,8,12,10,6,13,9,12,14,13,22,21,21,11,14,13,21,24,23
+Playing video or mobile games,12,1,6,12,0,6,7,3,5,10,4,7,13,3,7,10,3,6,34,8,21
+"Phone, video calls and texting",2,3,3,1,4,2,2,3,2,4,4,4,0,6,3,2,4,3,6,11,8
+Talking and socialising (in person),22,31,27,22,24,23,27,32,30,26,30,28,18,28,23,24,30,27,37,45,41
+Relaxing,20,9,14,19,10,14,7,9,8,16,13,14,15,14,15,15,11,13,24,20,22
+Going for a walk,6,15,10,6,6,6,4,6,5,6,6,6,7,8,7,6,7,6,11,12,11
+Exercise and sport,17,10,13,22,7,15,18,8,13,16,13,14,20,14,16,18,11,14,25,16,20
+Reading,1,5,3,1,7,4,2,7,4,2,7,4,6,7,6,2,7,4,12,20,16
+Hobbies and arts,5,3,4,11,4,7,7,3,5,10,8,9,7,9,8,8,6,7,20,18,19
+"Listening to music, radio or podcast",1,1,1,0,0,0,1,2,1,1,1,1,2,2,2,1,1,1,5,5,5
+Prayer and religion,1,2,1,4,3,3,3,2,2,5,5,5,7,3,5,4,3,4,3,5,4
+Attendance at sports or cultural venues,1,2,1,7,5,6,4,4,4,3,4,4,10,4,7,4,4,4,5,5,5
+Travel related to free time,9,13,11,20,28,23,12,13,12,12,11,11,12,14,13,12,14,13,20,21,21
+Total activities(d),1440,1440,1440,1440,1440,1440,1440,1440,1440,1440,1440,1440,1440,1440,1440,1440,1440,1440,1440,1440,1440
