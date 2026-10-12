@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An interactive data story about time, recreation, community and wellbeing in Australia.">
+  <title>Everyday Australia — life in the numbers</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="vendor/vega.min.js"></script>
+  <script defer src="vendor/vega-lite.min.js"></script>
+  <script defer src="vendor/vega-embed.min.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to the story</a>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Everyday Australia, back to top"><span class="brand-mark">EA<span class="brand-dot">.</span></span><span>EVERYDAY<br>AUSTRALIA</span></a>
+    <nav aria-label="Story sections">
+      <a href="#routines" aria-label="Routines">01 <span>Routines</span></a>
+      <a href="#recreation" aria-label="Recreation">02 <span>Recreation</span></a>
+      <a href="#community" aria-label="Community">03 <span>Community</span></a>
+      <a href="#wellbeing" aria-label="Wellbeing">04 <span>Wellbeing</span></a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-inner">
+        <p class="eyebrow">A DATA STORY · AUSTRALIA · 2026 DRAFT</p>
+        <h1>The everyday,<br><em>made visible.</em></h1>
+        <p class="hero-deck">Work, leisure and the small acts that connect us. Follow the numbers from a single day to the communities we make together.</p>
+        <a class="hero-link" href="#routines">Explore the story <span aria-hidden="true">↘</span></a>
+      </div>
+      <div class="hero-art" aria-hidden="true"><span class="art-ring"></span><span class="art-disc"></span><span class="art-square"></span><span class="art-line"></span><span class="art-tiny"></span></div>
+      <div class="hero-index"><span>TIME</span><span class="index-line"></span><span>PLAY</span><span class="index-line"></span><span>CONNECT</span></div>
+    </section>
+
+    <section class="story-section" id="routines">
+      <div class="section-heading"><p class="eyebrow">01 / HOW WE SPEND OUR TIME</p><h2>A day is more than<br><em>the workday.</em></h2><p>Daily averages reveal the quiet weight of personal care, unpaid work and free time. These measures cover the whole population, including people who did not do an activity that day.</p></div>
+      <div class="chart-grid two-col">
+        <article class="chart-card"><div class="card-top"><span class="chart-no">01</span><div><h3>Where does our time go?</h3><p>Average minutes per day · total population</p></div></div><div id="chart-routines" class="chart" role="img" aria-label="Horizontal bars of average daily minutes by activity"></div><p class="annotation">Personal care, including sleep, is the largest daily block. Work and study average <strong id="work-minutes">252</strong> minutes across the whole population.</p><p class="source">ABS, How Australians Use Their Time, Table 1 · See <a href="#sources">sources & method</a></p></article>
+        <article class="chart-card"><div class="card-top"><span class="chart-no">02</span><div><h3>Who does what?</h3><p>Daily minutes by sex · total population</p></div></div><div id="chart-gender" class="chart" role="img" aria-label="Dumbbell chart comparing daily minutes spent by men and women"></div><p class="annotation">Women average <strong>30 more minutes</strong> of housework per day than men in this survey. This is a descriptive difference, not a causal explanation.</p><p class="source">ABS, How Australians Use Their Time, Table 1</p></article>
+      </div>
+    </section>
+
+    <section class="story-section section-warm" id="recreation">
+      <div class="section-heading"><p class="eyebrow">02 / STAYING ACTIVE</p><h2>Out and <em>about.</em></h2><p>Participation rates help compare places of very different sizes. Select a state or territory to carry it through the rest of the story.</p></div>
+      <div class="state-control"><label for="state-select">Focus on a place</label><select id="state-select"><option value="AUS">Australia</option><option value="NSW">New South Wales</option><option value="VIC">Victoria</option><option value="QLD">Queensland</option><option value="SA">South Australia</option><option value="WA">Western Australia</option><option value="TAS">Tasmania</option><option value="NT">Northern Territory</option><option value="ACT">Australian Capital Territory</option></select><span id="state-summary" aria-live="polite">Choose a place for details</span></div>
+      <div class="chart-grid feature-grid">
+        <article class="chart-card map-card"><div class="card-top"><span class="chart-no">03</span><div><h3>Where do people move each week?</h3><p>Weekly sport and physical activity participation · age 15+</p></div></div><div class="map-layout"><div id="chart-sport-map" class="chart map-chart" role="img" aria-label="Choropleth map of weekly activity participation by state and territory"></div><aside class="map-aside"><div><span class="small-label">ACT INSET</span><div id="chart-act-inset" class="act-chart"></div><strong id="act-rate">78.3%</strong><span>weekly participation</span></div><p>Click a state on the map or use the selector above.</p></aside></div><p class="annotation">The ACT records the highest weekly rate in this extract; NSW and SA are near the lower end. Compare rates, not raw participant counts.</p><p class="source">Australian Sports Commission, AusPlay state tables · ABS 2021 state boundaries</p></article>
+        <article class="chart-card"><div class="card-top"><span class="chart-no">04</span><div><h3>Different places, different activities</h3><p>Participation rate for selected activities · age 15+</p></div></div><div id="chart-heatmap" class="chart" role="img" aria-label="Heatmap of walking, swimming and cycling rates across states"></div><p class="annotation">People can report more than one activity, so the three rates are not parts of a whole.</p><p class="source">Australian Sports Commission, AusPlay activity tables</p></article>
+        <article class="chart-card wide-card"><div class="card-top"><span class="chart-no">05</span><div><h3>How regular is participation?</h3><p>Three or more times a week · national benchmark marked by a dark tick</p></div></div><div id="chart-frequency" class="chart" role="img" aria-label="Bullet chart comparing frequent sport participation in eight states with the national rate"></div><p class="annotation">A common scale makes small gaps visible. These rates come from survey estimates and should not be read as exact population counts.</p><p class="source">Australian Sports Commission, AusPlay participation overview</p></article>
+      </div>
+    </section>
+
+    <section class="story-section" id="community">
+      <div class="section-heading"><p class="eyebrow">03 / COMMUNITY CONNECTIONS</p><h2>Taking part.<br><em>Giving back.</em></h2><p>Cultural venues, groups and volunteering show different ways people take part in public life. Here, counts and rates answer different questions.</p></div>
+      <div class="chart-grid two-col">
+        <article class="chart-card"><div class="card-top"><span class="chart-no">06</span><div><h3>Who attends cultural events?</h3><p>Estimated attendees in the past year · people age 15+</p></div></div><div id="chart-culture-map" class="chart map-chart" role="img" aria-label="Proportional symbol map of cultural venue attendance by state"></div><p class="annotation">Circle <strong>area</strong> represents people, not visits. Larger states have more attendees; the tooltip also gives each state’s participation rate.</p><p class="source">ABS, General Social Survey 2025, Table 6 · ABS boundaries</p></article>
+        <article class="chart-card"><div class="card-top"><span class="chart-no">07</span><div><h3>Where do volunteers live?</h3><p>Formal volunteers in the past year · estimated people</p></div></div><div id="chart-cartogram" class="chart" role="img" aria-label="Square cartogram showing state and territory volunteer counts"></div><p class="annotation">Each square’s <strong>area</strong> represents a volunteer count. Positions echo geography; the shapes are deliberately distorted.</p><p class="source">ABS, General Social Survey 2025, Table 6</p></article>
+        <article class="chart-card"><div class="card-top"><span class="chart-no">08</span><div><h3>Volunteering is a commitment</h3><p>Annual hours spent formal volunteering · national estimate</p></div></div><div id="chart-hours" class="chart" role="img" aria-label="Treemap of national formal volunteers by annual hours"></div><p class="annotation">The bands are exclusive. Their rounded estimates sum to about 5.0 million people; slight differences from the published total reflect rounding.</p><p class="source">ABS, General Social Survey 2025, Table 12</p></article>
+        <article class="chart-card"><div class="card-top"><span class="chart-no">09</span><div><h3>Is participation changing?</h3><p>National share involved · 2019 to 2025</p></div></div><div id="chart-trends" class="chart" role="img" aria-label="Slope chart of community involvement rates in 2019 and 2025"></div><p class="annotation">Formal volunteering and social group involvement are lower in 2025 than in 2019. The two surveys span a major change in social activity, but this chart cannot explain its causes.</p><p class="source">ABS, General Social Survey, Table 1 · Definitions in <a href="#sources">method</a></p></article>
+      </div>
+    </section>
+
+    <section class="story-section section-plum" id="wellbeing">
+      <div class="section-heading"><p class="eyebrow">04 / WELLBEING</p><h2>Connected, but<br><em>how do we feel?</em></h2><p>Rates of loneliness, trust and life satisfaction add a human perspective to participation. The selected place applies to the first two charts below.</p></div>
+      <div class="chart-grid two-col">
+        <article class="chart-card"><div class="card-top"><span class="chart-no">10</span><div><h3>Feeling lonely</h3><p>Often feel very lonely · people age 15+</p></div></div><div class="big-number"><strong id="lonely-value">17.9%</strong><span id="lonely-place">Australia</span></div><div id="chart-waffle" class="chart" role="img" aria-label="Waffle chart of people who often feel very lonely"></div><p class="annotation">Each square represents one percentage point; filled squares are rounded, while the printed value is the survey estimate.</p><p class="source">ABS, General Social Survey 2025, Table 6</p></article>
+        <article class="chart-card"><div class="card-top"><span class="chart-no">11</span><div><h3>How much do we trust?</h3><p>Agreement with four statements · <span id="trust-place">Australia</span></p></div></div><div id="chart-trust" class="chart" role="img" aria-label="Diverging stacked bars showing agreement, neutral and disagreement"></div><div class="legend"><span><i class="swatch disagree"></i>Disagree</span><span><i class="swatch neutral"></i>Neutral</span><span><i class="swatch agree"></i>Agree</span></div><p class="annotation">Bars centre the neutral share, so the two sides can be compared without losing respondents who chose neither.</p><p class="source">ABS, General Social Survey 2025, Table 6</p></article>
+        <article class="chart-card wide-card"><div class="card-top"><span class="chart-no">12</span><div><h3>Life satisfaction through the years</h3><p>Mean score out of 10 · selected age groups · published survey years</p></div></div><div id="chart-satisfaction" class="chart" role="img" aria-label="Line chart of mean life satisfaction by age from 2014 to 2025"></div><p class="annotation">Older adults report the highest mean among these three age groups in every displayed year. Scores dip around the 2020 survey for some groups; interpret them alongside changes in survey timing and context.</p><p class="source">ABS, General Social Survey, Table 8</p></article>
+      </div>
+    </section>
+
+    <section class="closing"><p class="eyebrow">THE STORY SO FAR</p><h2>Everyday life is made<br>of <em>unequal time</em> and<br><em>shared places.</em></h2><p>Women spend more time on housework, participation in sport varies by place, and millions take part in cultural events and volunteering. Yet connection and wellbeing are not guaranteed. These datasets describe patterns; they do not establish why those patterns occur.</p></section>
+
+    <footer id="sources"><div><p class="eyebrow">SOURCES & METHOD</p><h2>Behind the numbers.</h2><p>This draft uses the supplied CSV extracts from the ABS and Australian Sports Commission. State maps use simplified 2021 ABS state and territory boundaries; the ACT is shown separately because it is small at national scale. AusPlay source rates are fractions converted to percentages. General Social Survey counts are estimates in thousands. Survey populations and years differ, so charts should be read within their own captions.</p><p>Formal volunteering means unpaid work through an organisation in the last 12 months. Cultural attendance means attendance at selected venues or events in the last 12 months. Daily time uses the whole-population average, including non-participants. See each original release for survey notes and reliability guidance.</p><div class="source-links"><a href="https://www.abs.gov.au/statistics/people/people-and-communities/how-australians-use-their-time/latest-release" target="_blank" rel="noopener">ABS Time Use ↗</a><a href="https://www.sportaus.gov.au/ausplay" target="_blank" rel="noopener">AusPlay ↗</a><a href="https://www.abs.gov.au/statistics/people/people-and-communities/general-social-survey-summary-results-australia/latest-release" target="_blank" rel="noopener">ABS General Social Survey ↗</a><a href="https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs/edition-3-july-2021-june-2026/access-and-downloads/digital-boundary-files" target="_blank" rel="noopener">ABS boundaries ↗</a></div></div><div class="footer-meta"><span>EVERYDAY AUSTRALIA</span><span>FIT3179 · CRITIQUE DRAFT · 12 OCT 2026</span><span>Author: kimmyfc · Created with AI assistance for code, layout and copy; data and interpretations require final student review.</span></div></footer>
+  </main>
+</body>
+</html>
