@@ -1,0 +1,81 @@
+[
+ {
+  "state": "NSW",
+  "cultural_thousands": 5389.3,
+  "cultural_rate": 77.2,
+  "volunteer_thousands": 1554.4,
+  "lonely": 16.3,
+  "longitude": 148.7,
+  "latitude": -32.0
+ },
+ {
+  "state": "VIC",
+  "cultural_thousands": 4719.4,
+  "cultural_rate": 82.1,
+  "volunteer_thousands": 1252.9,
+  "lonely": 18.4,
+  "longitude": 144.8,
+  "latitude": -37.0
+ },
+ {
+  "state": "QLD",
+  "cultural_thousands": 3514.9,
+  "cultural_rate": 77.9,
+  "volunteer_thousands": 990.8,
+  "lonely": 18.1,
+  "longitude": 145.2,
+  "latitude": -22.2
+ },
+ {
+  "state": "SA",
+  "cultural_thousands": 1188.2,
+  "cultural_rate": 76.8,
+  "volunteer_thousands": 364.4,
+  "lonely": 20.6,
+  "longitude": 135.6,
+  "latitude": -30.0
+ },
+ {
+  "state": "WA",
+  "cultural_thousands": 1952.5,
+  "cultural_rate": 81.4,
+  "volunteer_thousands": 574.4,
+  "lonely": 19.5,
+  "longitude": 122.8,
+  "latitude": -26.2
+ },
+ {
+  "state": "TAS",
+  "cultural_thousands": 379.9,
+  "cultural_rate": 80.7,
+  "volunteer_thousands": 129.4,
+  "lonely": 18.0,
+  "longitude": 146.7,
+  "latitude": -42.1
+ },
+ {
+  "state": "NT",
+  "cultural_thousands": 139.1,
+  "cultural_rate": 83.1,
+  "volunteer_thousands": 44.6,
+  "lonely": 18.5,
+  "longitude": 133.4,
+  "latitude": -19.2
+ },
+ {
+  "state": "ACT",
+  "cultural_thousands": 345.8,
+  "cultural_rate": 88.8,
+  "volunteer_thousands": 85.7,
+  "lonely": 17.2,
+  "longitude": 149.1,
+  "latitude": -35.5
+ },
+ {
+  "state": "AUS",
+  "cultural_thousands": 17632.7,
+  "cultural_rate": 79.4,
+  "volunteer_thousands": 5006.6,
+  "lonely": 17.9
+ }
+]

@@ -1,0 +1,290 @@
+[
+ {
+  "state": "NSW",
+  "audience": "Early childhood",
+  "order": 0,
+  "participants": 778752.0
+ },
+ {
+  "state": "VIC",
+  "audience": "Early childhood",
+  "order": 0,
+  "participants": 1098978.0
+ },
+ {
+  "state": "QLD",
+  "audience": "Early childhood",
+  "order": 0,
+  "participants": 897522.0
+ },
+ {
+  "state": "SA",
+  "audience": "Early childhood",
+  "order": 0,
+  "participants": 278571.0
+ },
+ {
+  "state": "WA",
+  "audience": "Early childhood",
+  "order": 0,
+  "participants": 409612.0
+ },
+ {
+  "state": "TAS",
+  "audience": "Early childhood",
+  "order": 0,
+  "participants": 47553.0
+ },
+ {
+  "state": "NT",
+  "audience": "Early childhood",
+  "order": 0,
+  "participants": 27266.0
+ },
+ {
+  "state": "ACT",
+  "audience": "Early childhood",
+  "order": 0,
+  "participants": 40474.0
+ },
+ {
+  "state": "NSW",
+  "audience": "Children",
+  "order": 1,
+  "participants": 295275.0
+ },
+ {
+  "state": "VIC",
+  "audience": "Children",
+  "order": 1,
+  "participants": 413694.0
+ },
+ {
+  "state": "QLD",
+  "audience": "Children",
+  "order": 1,
+  "participants": 251651.0
+ },
+ {
+  "state": "SA",
+  "audience": "Children",
+  "order": 1,
+  "participants": 278571.0
+ },
+ {
+  "state": "WA",
+  "audience": "Children",
+  "order": 1,
+  "participants": 150695.0
+ },
+ {
+  "state": "TAS",
+  "audience": "Children",
+  "order": 1,
+  "participants": 14008.0
+ },
+ {
+  "state": "NT",
+  "audience": "Children",
+  "order": 1,
+  "participants": 20219.0
+ },
+ {
+  "state": "ACT",
+  "audience": "Children",
+  "order": 1,
+  "participants": 3902.0
+ },
+ {
+  "state": "NSW",
+  "audience": "Young adult",
+  "order": 2,
+  "participants": 41807.0
+ },
+ {
+  "state": "VIC",
+  "audience": "Young adult",
+  "order": 2,
+  "participants": 41412.0
+ },
+ {
+  "state": "QLD",
+  "audience": "Young adult",
+  "order": 2,
+  "participants": 21209.0
+ },
+ {
+  "state": "SA",
+  "audience": "Young adult",
+  "order": 2,
+  "participants": 8221.0
+ },
+ {
+  "state": "WA",
+  "audience": "Young adult",
+  "order": 2,
+  "participants": 13898.0
+ },
+ {
+  "state": "TAS",
+  "audience": "Young adult",
+  "order": 2,
+  "participants": 6003.0
+ },
+ {
+  "state": "NT",
+  "audience": "Young adult",
+  "order": 2,
+  "participants": 3715.0
+ },
+ {
+  "state": "ACT",
+  "audience": "Young adult",
+  "order": 2,
+  "participants": 247.0
+ },
+ {
+  "state": "NSW",
+  "audience": "Adults",
+  "order": 3,
+  "participants": 265868.0
+ },
+ {
+  "state": "VIC",
+  "audience": "Adults",
+  "order": 3,
+  "participants": 279484.0
+ },
+ {
+  "state": "QLD",
+  "audience": "Adults",
+  "order": 3,
+  "participants": 337276.0
+ },
+ {
+  "state": "SA",
+  "audience": "Adults",
+  "order": 3,
+  "participants": 108164.0
+ },
+ {
+  "state": "WA",
+  "audience": "Adults",
+  "order": 3,
+  "participants": 145704.0
+ },
+ {
+  "state": "TAS",
+  "audience": "Adults",
+  "order": 3,
+  "participants": 9506.0
+ },
+ {
+  "state": "NT",
+  "audience": "Adults",
+  "order": 3,
+  "participants": 3439.0
+ },
+ {
+  "state": "ACT",
+  "audience": "Adults",
+  "order": 3,
+  "participants": 5430.0
+ },
+ {
+  "state": "NSW",
+  "audience": "Seniors",
+  "order": 4,
+  "participants": 75482.0
+ },
+ {
+  "state": "VIC",
+  "audience": "Seniors",
+  "order": 4,
+  "participants": 46788.0
+ },
+ {
+  "state": "QLD",
+  "audience": "Seniors",
+  "order": 4,
+  "participants": 13102.0
+ },
+ {
+  "state": "SA",
+  "audience": "Seniors",
+  "order": 4,
+  "participants": 16837.0
+ },
+ {
+  "state": "WA",
+  "audience": "Seniors",
+  "order": 4,
+  "participants": 25261.0
+ },
+ {
+  "state": "TAS",
+  "audience": "Seniors",
+  "order": 4,
+  "participants": 1691.0
+ },
+ {
+  "state": "NT",
+  "audience": "Seniors",
+  "order": 4,
+  "participants": 1133.0
+ },
+ {
+  "state": "ACT",
+  "audience": "Seniors",
+  "order": 4,
+  "participants": 1828.0
+ },
+ {
+  "state": "NSW",
+  "audience": "All ages",
+  "order": 5,
+  "participants": 226985.0
+ },
+ {
+  "state": "VIC",
+  "audience": "All ages",
+  "order": 5,
+  "participants": 131073.0
+ },
+ {
+  "state": "QLD",
+  "audience": "All ages",
+  "order": 5,
+  "participants": 134905.0
+ },
+ {
+  "state": "SA",
+  "audience": "All ages",
+  "order": 5,
+  "participants": 125919.0
+ },
+ {
+  "state": "WA",
+  "audience": "All ages",
+  "order": 5,
+  "participants": 39765.0
+ },
+ {
+  "state": "TAS",
+  "audience": "All ages",
+  "order": 5,
+  "participants": 7646.0
+ },
+ {
+  "state": "NT",
+  "audience": "All ages",
+  "order": 5,
+  "participants": 6897.0
+ },
+ {
+  "state": "ACT",
+  "audience": "All ages",
+  "order": 5,
+  "participants": 1000.0
+ }
+]

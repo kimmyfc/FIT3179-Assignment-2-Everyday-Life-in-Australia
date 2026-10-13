@@ -1,0 +1,41 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Bullet-style chart of the share of people active three or more times a week in each state and territory, against the national rate.",
+  "params": [{"name": "focus", "value": "AUS"}],
+  "data": {"url": "data/sport.json"},
+  "transform": [
+    {"calculate": "datum.state === 'AUS' ? datum.three : null", "as": "national"},
+    {"joinaggregate": [{"op": "max", "field": "national", "as": "benchmark"}]},
+    {"filter": "datum.state !== 'AUS'"}
+  ],
+  "width": "container",
+  "height": 280,
+  "encoding": {
+    "y": {"field": "state", "type": "nominal", "sort": ["NSW", "VIC", "QLD", "SA", "WA", "TAS", "NT", "ACT"], "axis": {"title": null, "labelPadding": 9}}
+  },
+  "layer": [
+    {
+      "mark": {"type": "bar", "height": 22, "cornerRadiusEnd": 2},
+      "encoding": {
+        "x": {"field": "three", "type": "quantitative", "scale": {"domain": [0, 65]}, "axis": {"title": "Active three or more times a week (%)", "tickCount": 7}},
+        "color": {"condition": {"test": "datum.state === focus", "value": "#ad4a3d"}, "value": "#d7824b"},
+        "tooltip": [
+          {"field": "state", "title": "Place"},
+          {"field": "three", "type": "quantitative", "title": "3+ times a week (%)", "format": ".1f"},
+          {"field": "benchmark", "type": "quantitative", "title": "Australia (%)", "format": ".1f"}
+        ]
+      }
+    },
+    {
+      "mark": {"type": "tick", "thickness": 3, "size": 30, "color": "#24243b"},
+      "encoding": {"x": {"field": "benchmark", "type": "quantitative"}}
+    },
+    {
+      "mark": {"type": "text", "align": "left", "dx": 6, "fontSize": 11, "color": "#24243b"},
+      "encoding": {
+        "x": {"field": "three", "type": "quantitative"},
+        "text": {"field": "three", "type": "quantitative", "format": ".1f"}
+      }
+    }
+  ]
+}

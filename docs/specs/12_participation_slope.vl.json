@@ -1,0 +1,39 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Slope chart of the share of Australian adults involved in formal volunteering, social groups and community support groups in 2019 and 2025.",
+  "data": {"url": "data/trends.json"},
+  "width": "container",
+  "height": 285,
+  "encoding": {
+    "x": {"field": "year", "type": "ordinal", "scale": {"padding": 0.7}, "axis": {"title": null, "labelAngle": 0, "labelFontWeight": "bold", "domain": false, "ticks": false}},
+    "y": {"field": "rate", "type": "quantitative", "scale": {"domain": [0, 60]}, "axis": {"title": "Share of adults (%)", "tickCount": 4}},
+    "color": {
+      "field": "series",
+      "type": "nominal",
+      "scale": {"domain": ["Social groups", "Formal volunteering", "Support groups"], "range": ["#45778d", "#ad4a3d", "#d7824b"]},
+      "legend": {"orient": "bottom", "title": null}
+    }
+  },
+  "layer": [
+    {
+      "mark": {"type": "line", "strokeWidth": 3, "point": {"filled": true, "size": 80}},
+      "encoding": {
+        "tooltip": [
+          {"field": "series", "title": "Involvement"},
+          {"field": "year", "title": "Year"},
+          {"field": "rate", "type": "quantitative", "title": "Share (%)", "format": ".1f"}
+        ]
+      }
+    },
+    {
+      "transform": [{"filter": "datum.year === 2019"}],
+      "mark": {"type": "text", "align": "right", "dx": -10, "fontSize": 12, "fontWeight": "bold"},
+      "encoding": {"text": {"field": "rate", "type": "quantitative", "format": ".1f"}}
+    },
+    {
+      "transform": [{"filter": "datum.year === 2025"}],
+      "mark": {"type": "text", "align": "left", "dx": 10, "fontSize": 12, "fontWeight": "bold"},
+      "encoding": {"text": {"field": "rate", "type": "quantitative", "format": ".1f"}}
+    }
+  ]
+}

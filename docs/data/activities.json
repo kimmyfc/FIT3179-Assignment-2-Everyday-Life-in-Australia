@@ -1,0 +1,122 @@
+[
+ {
+  "state": "NSW",
+  "activity": "Walking",
+  "rate": 48.2
+ },
+ {
+  "state": "NSW",
+  "activity": "Swimming",
+  "rate": 16.5
+ },
+ {
+  "state": "NSW",
+  "activity": "Cycling",
+  "rate": 7.0
+ },
+ {
+  "state": "VIC",
+  "activity": "Walking",
+  "rate": 51.6
+ },
+ {
+  "state": "VIC",
+  "activity": "Swimming",
+  "rate": 13.4
+ },
+ {
+  "state": "VIC",
+  "activity": "Cycling",
+  "rate": 9.0
+ },
+ {
+  "state": "QLD",
+  "activity": "Walking",
+  "rate": 49.8
+ },
+ {
+  "state": "QLD",
+  "activity": "Swimming",
+  "rate": 16.7
+ },
+ {
+  "state": "QLD",
+  "activity": "Cycling",
+  "rate": 7.6
+ },
+ {
+  "state": "SA",
+  "activity": "Walking",
+  "rate": 51.6
+ },
+ {
+  "state": "SA",
+  "activity": "Swimming",
+  "rate": 11.8
+ },
+ {
+  "state": "SA",
+  "activity": "Cycling",
+  "rate": 8.4
+ },
+ {
+  "state": "WA",
+  "activity": "Walking",
+  "rate": 51.0
+ },
+ {
+  "state": "WA",
+  "activity": "Swimming",
+  "rate": 16.3
+ },
+ {
+  "state": "WA",
+  "activity": "Cycling",
+  "rate": 10.3
+ },
+ {
+  "state": "TAS",
+  "activity": "Walking",
+  "rate": 55.9
+ },
+ {
+  "state": "TAS",
+  "activity": "Swimming",
+  "rate": 13.9
+ },
+ {
+  "state": "TAS",
+  "activity": "Cycling",
+  "rate": 9.1
+ },
+ {
+  "state": "NT",
+  "activity": "Walking",
+  "rate": 48.1
+ },
+ {
+  "state": "NT",
+  "activity": "Swimming",
+  "rate": 18.1
+ },
+ {
+  "state": "NT",
+  "activity": "Cycling",
+  "rate": 9.9
+ },
+ {
+  "state": "ACT",
+  "activity": "Walking",
+  "rate": 54.2
+ },
+ {
+  "state": "ACT",
+  "activity": "Swimming",
+  "rate": 17.6
+ },
+ {
+  "state": "ACT",
+  "activity": "Cycling",
+  "rate": 14.0
+ }
+]

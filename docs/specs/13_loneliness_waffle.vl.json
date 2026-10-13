@@ -1,0 +1,19 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Waffle chart: share of people aged 15+ who often feel very lonely in the selected place. Each square is one percentage point.",
+  "params": [{"name": "focus", "value": "AUS"}],
+  "data": {"url": "data/lonely_waffle.json"},
+  "transform": [{"filter": "datum.state === focus"}],
+  "width": "container",
+  "height": 170,
+  "mark": {"type": "rect", "cornerRadius": 2, "stroke": "#fffdf8", "strokeWidth": 2},
+  "encoding": {
+    "x": {"field": "col", "type": "ordinal", "axis": null},
+    "y": {"field": "row", "type": "ordinal", "axis": null},
+    "color": {"field": "filled", "type": "nominal", "scale": {"domain": [true, false], "range": ["#ad4a3d", "#e9d9ca"]}, "legend": null},
+    "tooltip": [
+      {"field": "state", "title": "Place"},
+      {"field": "lonely", "type": "quantitative", "title": "Often feel very lonely (%)", "format": ".1f"}
+    ]
+  }
+}

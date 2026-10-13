@@ -1,0 +1,19 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Inset of the Australian Capital Territory for the weekly activity choropleth, which is too small to see at national scale.",
+  "width": 75,
+  "height": 58,
+  "data": {"url": "data/aus-states.geojson", "format": {"type": "json", "property": "features"}},
+  "transform": [
+    {"filter": "datum.properties.state === 'ACT'"},
+    {"lookup": "properties.state", "from": {"data": {"url": "data/sport.json"}, "key": "state", "fields": ["weekly"]}}
+  ],
+  "projection": {"type": "conicEqualArea", "rotate": [-149, 0], "parallels": [-18, -36]},
+  "mark": {"type": "geoshape", "fill": "#ad4a3d", "stroke": "#24243b", "strokeWidth": 1},
+  "encoding": {
+    "tooltip": [
+      {"field": "properties.name", "type": "nominal", "title": "Place"},
+      {"field": "weekly", "type": "quantitative", "title": "At least weekly (%)", "format": ".1f"}
+    ]
+  }
+}

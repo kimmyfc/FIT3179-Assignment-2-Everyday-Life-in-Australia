@@ -1,0 +1,54 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Marimekko chart of public library program participants in 2023-24. Column width shows each state's share of all participants; segment height shows the share by target audience within that state.",
+  "data": {"url": "data/library_programs.json"},
+  "transform": [
+    {"joinaggregate": [{"op": "sum", "field": "participants", "as": "stateTotal"}], "groupby": ["state"]},
+    {"stack": "participants", "groupby": ["state"], "offset": "normalize", "sort": [{"field": "order", "order": "ascending"}], "as": ["y0", "y1"]},
+    {"stack": "participants", "groupby": [], "offset": "normalize", "sort": [{"field": "stateTotal", "order": "descending"}, {"field": "state", "order": "ascending"}, {"field": "order", "order": "ascending"}], "as": ["cx0", "cx1"]},
+    {"joinaggregate": [{"op": "min", "field": "cx0", "as": "x0"}, {"op": "max", "field": "cx1", "as": "x1"}], "groupby": ["state"]},
+    {"calculate": "(datum.x0 + datum.x1) / 2", "as": "xMid"},
+    {"calculate": "(datum.y0 + datum.y1) / 2", "as": "yMid"},
+    {"calculate": "datum.y1 - datum.y0", "as": "audienceShare"},
+    {"calculate": "datum.x1 - datum.x0", "as": "stateShare"}
+  ],
+  "width": "container",
+  "height": 320,
+  "encoding": {
+    "x": {"field": "x0", "type": "quantitative", "scale": {"domain": [0, 1]}, "axis": {"title": "Share of all program participants in Australia →", "format": ".0%", "values": [0, 0.25, 0.5, 0.75, 1], "grid": false}},
+    "y": {"field": "y0", "type": "quantitative", "scale": {"domain": [0, 1], "reverse": true}, "axis": {"title": "Share within the state", "format": ".0%", "values": [0, 0.25, 0.5, 0.75, 1], "grid": false}}
+  },
+  "layer": [
+    {
+      "mark": {"type": "rect", "stroke": "#fffdf8", "strokeWidth": 1.5},
+      "encoding": {
+        "x2": {"field": "x1"},
+        "y2": {"field": "y1"},
+        "color": {
+          "field": "audience",
+          "type": "nominal",
+          "sort": ["Early childhood", "Children", "Young adult", "Adults", "Seniors", "All ages"],
+          "scale": {"domain": ["Early childhood", "Children", "Young adult", "Adults", "Seniors", "All ages"], "range": ["#ad4a3d", "#d7824b", "#e2b04d", "#45778d", "#6b4c69", "#cbbfb3"]},
+          "legend": {"orient": "bottom", "title": null, "columns": 3, "symbolType": "square"}
+        },
+        "tooltip": [
+          {"field": "state", "title": "Place"},
+          {"field": "audience", "title": "Audience"},
+          {"field": "participants", "type": "quantitative", "title": "Participants", "format": ",.0f"},
+          {"field": "audienceShare", "type": "quantitative", "title": "Share of state's participants", "format": ".0%"},
+          {"field": "stateShare", "type": "quantitative", "title": "State's share of Australia", "format": ".1%"}
+        ]
+      }
+    },
+    {
+      "transform": [{"filter": "datum.order === 0 && datum.stateShare > 0.035"}],
+      "mark": {"type": "text", "baseline": "bottom", "dy": -6, "fontWeight": "bold", "fontSize": 12, "color": "#24243b"},
+      "encoding": {"x": {"field": "xMid", "type": "quantitative"}, "y": {"datum": 0}, "text": {"field": "state"}}
+    },
+    {
+      "transform": [{"filter": "datum.audienceShare > 0.12 && datum.stateShare > 0.07"}],
+      "mark": {"type": "text", "fontSize": 11, "color": "#fffdf8", "fontWeight": "bold"},
+      "encoding": {"x": {"field": "xMid", "type": "quantitative"}, "y": {"field": "yMid", "type": "quantitative"}, "text": {"field": "audienceShare", "type": "quantitative", "format": ".0%"}}
+    }
+  ]
+}

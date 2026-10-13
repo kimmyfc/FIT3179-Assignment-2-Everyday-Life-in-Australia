@@ -1,0 +1,32 @@
+[
+ {
+  "series": "Formal volunteering",
+  "year": 2019,
+  "rate": 29.5
+ },
+ {
+  "series": "Formal volunteering",
+  "year": 2025,
+  "rate": 22.6
+ },
+ {
+  "series": "Social groups",
+  "year": 2019,
+  "rate": 51.1
+ },
+ {
+  "series": "Social groups",
+  "year": 2025,
+  "rate": 45.3
+ },
+ {
+  "series": "Support groups",
+  "year": 2019,
+  "rate": 25.3
+ },
+ {
+  "series": "Support groups",
+  "year": 2025,
+  "rate": 20.7
+ }
+]

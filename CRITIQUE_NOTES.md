@@ -2,17 +2,17 @@
 
 ## Show in two minutes
 
-1. Open the draft page and scroll through the four-part story: routines, recreation, community, wellbeing.
-2. Point out that all twelve charts use Vega or Vega-Lite and draw from ABS Time Use, AusPlay and the ABS General Social Survey.
+1. Open the draft page and scroll through the five-part story: routines, recreation, shared places, community, wellbeing.
+2. Point out that all sixteen charts use Vega or Vega-Lite, each with its own JSON spec in docs/specs/, and that they combine ABS Time Use, AusPlay, the ABS General Social Survey, public library statistics, Mapping Social Cohesion and OpenStreetMap (topic 25).
 3. In Recreation, click Western Australia on the choropleth. The selected state also highlights the activity heatmap and frequent-participation chart, and changes the loneliness and trust views later on the page. The ACT has its own map inset.
-4. Show the three map approaches: rate choropleth, attendance-count proportional symbols, and an area-scaled square cartogram of volunteer counts.
+4. Show the four map approaches: rate choropleth, dot map of shared places, attendance-count proportional symbols, and an area-scaled square cartogram of volunteer counts.
 5. Explain one specific finding from each section: personal care dominates daily minutes; weekly activity varies by place; formal volunteering fell between 2019 and 2025; feeling lonely and trusting institutions differ by state.
 
 ## Ask the tutor
 
 - Does the square cartogram qualify as a third distinct map idiom for this rubric? Its positions evoke geography and square areas encode volunteer counts.
 - Are the treemap, waffle, dumbbell, bullet chart, heatmap, slope chart and diverging bars treated as advanced idioms here? Which should be strengthened before final submission?
-- Is the amount of text and the four-section reading order effective on a small laptop screen?
+- Is the amount of text and the five-section reading order effective on a small laptop screen?
 - Which survey uncertainty or comparability notes should be made more prominent?
 
 ## Before final submission

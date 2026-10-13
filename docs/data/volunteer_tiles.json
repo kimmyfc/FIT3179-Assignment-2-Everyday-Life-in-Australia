@@ -1,0 +1,74 @@
+[
+ {
+  "state": "WA",
+  "volunteer_thousands": 574.4,
+  "volunteer_rate": 23.9,
+  "x": 15,
+  "x2": 86.9,
+  "y": 124,
+  "y2": 195.9
+ },
+ {
+  "state": "NT",
+  "volunteer_thousands": 44.6,
+  "volunteer_rate": 26.7,
+  "x": 161,
+  "x2": 181.0,
+  "y": 38,
+  "y2": 58.0
+ },
+ {
+  "state": "SA",
+  "volunteer_thousands": 364.4,
+  "volunteer_rate": 23.6,
+  "x": 177,
+  "x2": 234.3,
+  "y": 206,
+  "y2": 263.3
+ },
+ {
+  "state": "QLD",
+  "volunteer_thousands": 990.8,
+  "volunteer_rate": 22.0,
+  "x": 297,
+  "x2": 391.4,
+  "y": 57,
+  "y2": 151.4
+ },
+ {
+  "state": "NSW",
+  "volunteer_thousands": 1554.4,
+  "volunteer_rate": 22.3,
+  "x": 294,
+  "x2": 412.3,
+  "y": 178,
+  "y2": 296.3
+ },
+ {
+  "state": "VIC",
+  "volunteer_thousands": 1252.9,
+  "volunteer_rate": 21.8,
+  "x": 310,
+  "x2": 416.2,
+  "y": 306,
+  "y2": 412.2
+ },
+ {
+  "state": "TAS",
+  "volunteer_thousands": 129.4,
+  "volunteer_rate": 27.5,
+  "x": 345,
+  "x2": 379.1,
+  "y": 426,
+  "y2": 460.1
+ },
+ {
+  "state": "ACT",
+  "volunteer_thousands": 85.7,
+  "volunteer_rate": 22.0,
+  "x": 425,
+  "x2": 452.8,
+  "y": 276,
+  "y2": 303.8
+ }
+]

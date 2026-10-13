@@ -1,0 +1,32 @@
+[
+ {
+  "activity": "Housework",
+  "sex": "Men",
+  "minutes": 32.0
+ },
+ {
+  "activity": "Housework",
+  "sex": "Women",
+  "minutes": 62.0
+ },
+ {
+  "activity": "Child care",
+  "sex": "Men",
+  "minutes": 38.0
+ },
+ {
+  "activity": "Child care",
+  "sex": "Women",
+  "minutes": 64.0
+ },
+ {
+  "activity": "Free time",
+  "sex": "Men",
+  "minutes": 317.0
+ },
+ {
+  "activity": "Free time",
+  "sex": "Women",
+  "minutes": 293.0
+ }
+]
