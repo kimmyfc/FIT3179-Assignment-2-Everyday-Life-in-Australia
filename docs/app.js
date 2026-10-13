@@ -6,7 +6,7 @@
 
 const theme = {
   background: null,
-  font: 'Arial, Helvetica, sans-serif',
+  font: 'Nunito, Arial, sans-serif',
   view: {stroke: null},
   axis: {
     labelColor: '#5C5F7A', titleColor: '#5C5F7A', domainColor: '#CDD3E0', tickColor: '#CDD3E0',
