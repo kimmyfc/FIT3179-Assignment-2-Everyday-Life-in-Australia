@@ -1,0 +1,35 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Dot map of libraries, community centres and sports centres mapped in OpenStreetMap. Click a legend entry to highlight one type.",
+  "width": "container",
+  "height": 420,
+  "projection": {"type": "conicEqualArea", "rotate": [-134, 0], "parallels": [-18, -36]},
+  "layer": [
+    {
+      "data": {"url": "data/aus-states.geojson", "format": {"type": "json", "property": "features"}},
+      "mark": {"type": "geoshape", "fill": "#ebe2d7", "stroke": "#fffdf8", "strokeWidth": 1.2}
+    },
+    {
+      "data": {"url": "data/community_places.csv", "format": {"type": "csv", "parse": {"lat": "number", "lon": "number"}}},
+      "params": [
+        {"name": "placeType", "select": {"type": "point", "fields": ["type"]}, "bind": "legend"}
+      ],
+      "mark": {"type": "circle", "size": 9, "stroke": null},
+      "encoding": {
+        "longitude": {"field": "lon", "type": "quantitative"},
+        "latitude": {"field": "lat", "type": "quantitative"},
+        "color": {
+          "field": "type",
+          "type": "nominal",
+          "scale": {"domain": ["Library", "Community centre", "Sports centre"], "range": ["#ad4a3d", "#45778d", "#e2b04d"]},
+          "legend": {"orient": "bottom", "title": "Click a type to highlight it", "symbolOpacity": 1, "symbolSize": 90}
+        },
+        "opacity": {"condition": {"param": "placeType", "value": 0.65}, "value": 0.04},
+        "tooltip": [
+          {"field": "name", "title": "Name"},
+          {"field": "type", "title": "Type"}
+        ]
+      }
+    }
+  ]
+}

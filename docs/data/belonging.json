@@ -1,0 +1,62 @@
+[
+ {
+  "birthplace": "Born in Australia",
+  "generation": "Silent generation",
+  "before": 90.0,
+  "now": 85.0
+ },
+ {
+  "birthplace": "Born in Australia",
+  "generation": "Baby boomers",
+  "before": 77.0,
+  "now": 73.0
+ },
+ {
+  "birthplace": "Born in Australia",
+  "generation": "Gen X",
+  "before": 77.0,
+  "now": 53.0
+ },
+ {
+  "birthplace": "Born in Australia",
+  "generation": "Millennials",
+  "before": 64.0,
+  "now": 34.0
+ },
+ {
+  "birthplace": "Born in Australia",
+  "generation": "Gen Z",
+  "before": null,
+  "now": 31.0
+ },
+ {
+  "birthplace": "Born overseas",
+  "generation": "Silent generation",
+  "before": 69.0,
+  "now": 66.0
+ },
+ {
+  "birthplace": "Born overseas",
+  "generation": "Baby boomers",
+  "before": 64.0,
+  "now": 62.0
+ },
+ {
+  "birthplace": "Born overseas",
+  "generation": "Gen X",
+  "before": 51.0,
+  "now": 43.0
+ },
+ {
+  "birthplace": "Born overseas",
+  "generation": "Millennials",
+  "before": 37.0,
+  "now": 29.0
+ },
+ {
+  "birthplace": "Born overseas",
+  "generation": "Gen Z",
+  "before": null,
+  "now": 24.0
+ }
+]

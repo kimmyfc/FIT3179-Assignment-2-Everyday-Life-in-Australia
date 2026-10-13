@@ -1,0 +1,36 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Diverging stacked bars: share of people aged 15+ in the selected place who agree, are neutral or disagree that most people, the healthcare system, police and the justice system can be trusted. Neutral answers are centred on zero.",
+  "params": [{"name": "focus", "value": "AUS"}],
+  "data": {"url": "data/trust.json"},
+  "transform": [{"filter": "datum.state === focus"}],
+  "width": "container",
+  "height": 240,
+  "encoding": {
+    "y": {"field": "question", "type": "nominal", "sort": ["People", "Healthcare", "Police", "Justice"], "axis": {"title": null, "labelPadding": 8, "labelExpr": "datum.value === 'People' ? 'Most people' : datum.value"}}
+  },
+  "layer": [
+    {
+      "mark": {"type": "bar", "height": 26},
+      "encoding": {
+        "x": {"field": "start", "type": "quantitative", "scale": {"domain": [-65, 85]}, "axis": {"title": "Share of people aged 15+ (%)", "labelExpr": "abs(datum.value)"}},
+        "x2": {"field": "end"},
+        "color": {"field": "answer", "type": "nominal", "scale": {"domain": ["Disagree", "Neutral", "Agree"], "range": ["#ad4a3d", "#d9cabc", "#45778d"]}, "legend": null},
+        "tooltip": [
+          {"field": "question", "title": "Trust in"},
+          {"field": "answer", "title": "Answer"},
+          {"field": "rate", "type": "quantitative", "title": "Share (%)", "format": ".1f"}
+        ]
+      }
+    },
+    {
+      "mark": {"type": "rule", "color": "#24243b", "strokeWidth": 1},
+      "encoding": {"x": {"datum": 0}, "y": null}
+    },
+    {
+      "transform": [{"filter": "datum.answer === 'Agree'"}],
+      "mark": {"type": "text", "align": "left", "dx": 6, "fontSize": 11, "fontWeight": "bold", "color": "#45778d"},
+      "encoding": {"x": {"field": "end", "type": "quantitative"}, "text": {"field": "rate", "type": "quantitative", "format": ".0f"}}
+    }
+  ]
+}

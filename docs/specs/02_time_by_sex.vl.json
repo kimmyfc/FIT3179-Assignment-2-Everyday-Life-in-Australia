@@ -1,0 +1,51 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Dumbbell chart: daily minutes spent on housework, child care and free time by men and women.",
+  "data": {"url": "data/time_gender.json"},
+  "width": "container",
+  "height": 230,
+  "encoding": {
+    "y": {
+      "field": "activity",
+      "type": "nominal",
+      "sort": ["Housework", "Child care", "Free time"],
+      "axis": {"title": null, "labelPadding": 8}
+    }
+  },
+  "layer": [
+    {
+      "transform": [
+        {"aggregate": [{"op": "min", "field": "minutes", "as": "low"}, {"op": "max", "field": "minutes", "as": "high"}], "groupby": ["activity"]}
+      ],
+      "mark": {"type": "rule", "strokeWidth": 4, "color": "#d8c6bc"},
+      "encoding": {
+        "x": {"field": "low", "type": "quantitative", "scale": {"domain": [0, 340]}, "axis": {"title": "Minutes per day"}},
+        "x2": {"field": "high"}
+      }
+    },
+    {
+      "mark": {"type": "point", "filled": true, "size": 150, "opacity": 1},
+      "encoding": {
+        "x": {"field": "minutes", "type": "quantitative"},
+        "color": {
+          "field": "sex",
+          "type": "nominal",
+          "scale": {"domain": ["Men", "Women"], "range": ["#45778d", "#ad4a3d"]},
+          "legend": {"orient": "bottom", "title": null}
+        },
+        "tooltip": [
+          {"field": "activity", "title": "Activity"},
+          {"field": "sex", "title": "Group"},
+          {"field": "minutes", "type": "quantitative", "title": "Minutes per day"}
+        ]
+      }
+    },
+    {
+      "mark": {"type": "text", "dy": -14, "fontSize": 11, "color": "#696775"},
+      "encoding": {
+        "x": {"field": "minutes", "type": "quantitative"},
+        "text": {"field": "minutes", "type": "quantitative", "format": ".0f"}
+      }
+    }
+  ]
+}

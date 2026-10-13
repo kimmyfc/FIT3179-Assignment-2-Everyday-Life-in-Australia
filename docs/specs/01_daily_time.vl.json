@@ -1,0 +1,36 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Average minutes per day spent on four activity groups, total Australian population.",
+  "data": {"url": "data/routines.json"},
+  "width": "container",
+  "height": 240,
+  "encoding": {
+    "y": {
+      "field": "activity",
+      "type": "nominal",
+      "sort": ["Personal care", "Work & study", "Unpaid work", "Free time"],
+      "axis": {"title": null, "labelPadding": 8}
+    },
+    "x": {
+      "field": "minutes",
+      "type": "quantitative",
+      "scale": {"domain": [0, 700]},
+      "axis": {"title": "Minutes per day", "tickCount": 5}
+    }
+  },
+  "layer": [
+    {
+      "mark": {"type": "bar", "cornerRadiusEnd": 3, "color": "#ad4a3d"},
+      "encoding": {
+        "tooltip": [
+          {"field": "activity", "title": "Activity"},
+          {"field": "minutes", "type": "quantitative", "title": "Minutes per day"}
+        ]
+      }
+    },
+    {
+      "mark": {"type": "text", "align": "left", "dx": 7, "fontWeight": "bold", "color": "#24243b"},
+      "encoding": {"text": {"field": "minutes", "type": "quantitative", "format": ".0f"}}
+    }
+  ]
+}

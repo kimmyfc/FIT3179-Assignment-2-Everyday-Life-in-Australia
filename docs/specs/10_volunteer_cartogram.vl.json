@@ -1,0 +1,46 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Square cartogram of formal volunteers (people 15+) by state and territory. Square area is proportional to the number of volunteers; positions echo geography.",
+  "params": [{"name": "focus", "value": "AUS"}],
+  "data": {"url": "data/volunteer_tiles.json"},
+  "transform": [
+    {"calculate": "(datum.x + datum.x2) / 2", "as": "cx"},
+    {"calculate": "(datum.y + datum.y2) / 2", "as": "cy"}
+  ],
+  "width": "container",
+  "height": 440,
+  "encoding": {
+    "x": {"field": "x", "type": "quantitative", "scale": {"domain": [0, 520]}, "axis": null},
+    "y": {"field": "y", "type": "quantitative", "scale": {"domain": [480, 0]}, "axis": null}
+  },
+  "layer": [
+    {
+      "mark": {"type": "rect", "stroke": "#fff7e8", "strokeWidth": 2},
+      "encoding": {
+        "x2": {"field": "x2"},
+        "y2": {"field": "y2"},
+        "color": {"condition": {"test": "datum.state === focus", "value": "#ad4a3d"}, "value": "#45778d"},
+        "tooltip": [
+          {"field": "state", "title": "Place"},
+          {"field": "volunteer_thousands", "type": "quantitative", "title": "Formal volunteers (thousands)", "format": ",.1f"},
+          {"field": "volunteer_rate", "type": "quantitative", "title": "Share of people 15+ (%)", "format": ".1f"}
+        ]
+      }
+    },
+    {
+      "transform": [{"filter": "datum.volunteer_thousands > 100"}],
+      "mark": {"type": "text", "fontWeight": "bold", "fontSize": 12, "color": "#fffdf8", "baseline": "bottom"},
+      "encoding": {"x": {"field": "cx", "type": "quantitative"}, "y": {"field": "cy", "type": "quantitative"}, "text": {"field": "state"}}
+    },
+    {
+      "transform": [{"filter": "datum.volunteer_thousands <= 100"}],
+      "mark": {"type": "text", "fontWeight": "bold", "fontSize": 11, "color": "#24243b", "baseline": "bottom", "dy": -4},
+      "encoding": {"x": {"field": "cx", "type": "quantitative"}, "y": {"field": "y", "type": "quantitative"}, "text": {"field": "state"}}
+    },
+    {
+      "transform": [{"filter": "datum.volunteer_thousands > 100"}],
+      "mark": {"type": "text", "fontSize": 11, "color": "#fffdf8", "baseline": "top", "dy": 2},
+      "encoding": {"x": {"field": "cx", "type": "quantitative"}, "y": {"field": "cy", "type": "quantitative"}, "text": {"field": "volunteer_thousands", "type": "quantitative", "format": ",.0f"}}
+    }
+  ]
+}

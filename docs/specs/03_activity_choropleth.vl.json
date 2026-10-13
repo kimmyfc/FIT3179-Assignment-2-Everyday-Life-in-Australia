@@ -1,0 +1,29 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Choropleth map of weekly sport and physical activity participation (age 15+) by state and territory. The focus parameter outlines the selected place.",
+  "params": [{"name": "focus", "value": "AUS"}],
+  "width": "container",
+  "height": 340,
+  "projection": {"type": "conicEqualArea", "rotate": [-134, 0], "parallels": [-18, -36]},
+  "data": {"url": "data/aus-states.geojson", "format": {"type": "json", "property": "features"}},
+  "transform": [
+    {"lookup": "properties.state", "from": {"data": {"url": "data/sport.json"}, "key": "state", "fields": ["weekly", "three"]}}
+  ],
+  "mark": {"type": "geoshape", "strokeWidth": 1.2, "cursor": "pointer"},
+  "encoding": {
+    "color": {
+      "field": "weekly",
+      "type": "quantitative",
+      "title": "Active at least weekly (%)",
+      "scale": {"domain": [65, 80], "range": ["#f7dbb8", "#ad4a3d"]},
+      "legend": {"orient": "bottom", "gradientLength": 170}
+    },
+    "stroke": {"condition": {"test": "datum.properties.state === focus", "value": "#24243b"}, "value": "#fffdf8"},
+    "strokeWidth": {"condition": {"test": "datum.properties.state === focus", "value": 3}, "value": 1.2},
+    "tooltip": [
+      {"field": "properties.name", "type": "nominal", "title": "Place"},
+      {"field": "weekly", "type": "quantitative", "title": "At least weekly (%)", "format": ".1f"},
+      {"field": "three", "type": "quantitative", "title": "3+ times a week (%)", "format": ".1f"}
+    ]
+  }
+}

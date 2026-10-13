@@ -1,6 +1,53 @@
-# Everyday Australia — FIT3179 Assignment 2
+# Everyday Life in Australia — FIT3179 Data Visualisation 2
 
-This repository contains a critique draft of a single-page data visualisation about routines, recreation, community and wellbeing in Australia. The GitHub Pages webpage is in [`docs/`](docs/). It contains twelve Vega or Vega-Lite charts, including a choropleth, a proportional-symbol map and a square cartogram. All four sections remain visible on one scrolling page.
+**Topic 25 (Volume 16: Community & Everyday Australia):** an interactive data story that combines datasets on time use, recreation, shared public places, volunteering and wellbeing to ask *where Australians spend their everyday lives, which shared places they use, and whether the connections they make are holding up.*
+
+**Live page:** https://kimmyfc.github.io/FIT3179-Assignment-2-Everyday-Life-in-Australia/
+
+Author: kimmyfc · Last updated 13 October 2026
+
+## Chart specifications
+
+Every chart is a standalone, human-readable JSON specification in [`docs/specs/`](docs/specs/). There are 16 charts in five sections, plus a small ACT inset for the activity map. All are Vega-Lite except the treemap, which uses Vega.
+
+| # | Chart | Idiom | Spec |
+|---|-------|-------|------|
+| 01 | Where does our time go? | Bar chart | [`01_daily_time.vl.json`](docs/specs/01_daily_time.vl.json) |
+| 02 | Who does what? | Dumbbell chart | [`02_time_by_sex.vl.json`](docs/specs/02_time_by_sex.vl.json) |
+| 03 | Where do people move each week? | **Map:** choropleth + ACT inset | [`03_activity_choropleth.vl.json`](docs/specs/03_activity_choropleth.vl.json), [`03b_act_inset.vl.json`](docs/specs/03b_act_inset.vl.json) |
+| 04 | Different places, different activities | Heatmap | [`04_activity_heatmap.vl.json`](docs/specs/04_activity_heatmap.vl.json) |
+| 05 | How regular is participation? | Bullet chart | [`05_frequency_bullet.vl.json`](docs/specs/05_frequency_bullet.vl.json) |
+| 06 | Where are the shared places? | **Map:** dot map | [`06_shared_places_map.vl.json`](docs/specs/06_shared_places_map.vl.json) |
+| 07 | Libraries bounced back | Index line chart | [`07_library_recovery.vl.json`](docs/specs/07_library_recovery.vl.json) |
+| 08 | Who goes to library programs? | Marimekko chart | [`08_library_programs_mekko.vl.json`](docs/specs/08_library_programs_mekko.vl.json) |
+| 09 | Who attends cultural events? | **Map:** proportional symbols | [`09_culture_symbols.vl.json`](docs/specs/09_culture_symbols.vl.json) |
+| 10 | Where do volunteers live? | **Map:** square cartogram | [`10_volunteer_cartogram.vl.json`](docs/specs/10_volunteer_cartogram.vl.json) |
+| 11 | Volunteering is a commitment | Treemap (Vega) | [`11_volunteer_hours_treemap.vg.json`](docs/specs/11_volunteer_hours_treemap.vg.json) |
+| 12 | Is participation changing? | Slope chart | [`12_participation_slope.vl.json`](docs/specs/12_participation_slope.vl.json) |
+| 13 | Feeling lonely | Waffle chart | [`13_loneliness_waffle.vl.json`](docs/specs/13_loneliness_waffle.vl.json) |
+| 14 | How much do we trust? | Diverging stacked bars | [`14_trust_diverging.vl.json`](docs/specs/14_trust_diverging.vl.json) |
+| 15 | Who feels they belong? | Dumbbell chart (small multiples) | [`15_belonging_generations.vl.json`](docs/specs/15_belonging_generations.vl.json) |
+| 16 | Life satisfaction through the years | Multi-line chart | [`16_life_satisfaction.vl.json`](docs/specs/16_life_satisfaction.vl.json) |
+
+The "Focus on a place" selector (and clicking a state on map 03) sets a `focus` parameter declared in specs 03, 04, 05, 10, 13 and 14. [`docs/app.js`](docs/app.js) only embeds the specs, applies a shared theme and passes that parameter between charts.
+
+## Data sources
+
+| Source | Used in |
+|--------|---------|
+| [ABS, How Australians Use Their Time](https://www.abs.gov.au/statistics/people/people-and-communities/how-australians-use-their-time/latest-release) | 01–02 |
+| [Australian Sports Commission, AusPlay](https://www.sportaus.gov.au/ausplay) | 03–05 |
+| [OpenStreetMap](https://www.openstreetmap.org/copyright) © OpenStreetMap contributors, ODbL (Overpass export, October 2026) | 06 |
+| [ALIA & NSLA, Australian Public Library Statistical Report 2023–24](https://read.alia.org.au/library-statistics) | 07–08 |
+| [ABS, General Social Survey](https://www.abs.gov.au/statistics/people/people-and-communities/general-social-survey-summary-results-australia/latest-release) | 09–14, 16 |
+| [Scanlon Foundation Research Institute, Mapping Social Cohesion 2025](https://scanloninstitute.org.au/mapping-social-cohesion-2025/) | 15 |
+| [ABS ASGS 2021 state and territory boundaries](https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs/edition-3-july-2021-june-2026/access-and-downloads/digital-boundary-files) | all maps |
+
+`scripts/build_data.py` reads the source CSVs in this repository and writes the small files in `docs/data/` (about 0.8 MB in total). It converts AusPlay rates from fractions to percentages and leaves the source CSVs unchanged. `scripts/prepare_boundaries.py` documents how the state boundary GeoJSON was simplified. Maps use an Albers equal-area conic projection (standard parallels 18°S and 36°S), which suits Australia.
+
+```bash
+python3 scripts/build_data.py
+```
 
 ## Preview locally
 
@@ -8,20 +55,12 @@ This repository contains a critique draft of a single-page data visualisation ab
 python3 -m http.server 8765 --directory docs
 ```
 
-Open `http://127.0.0.1:8765/`. The page uses local copies of Vega, Vega-Lite and Vega-Embed, so no chart library CDN is needed. Do not open `docs/index.html` with a `file://` URL; browsers block its data fetches in that mode.
+Then open http://127.0.0.1:8765/. Do not open `docs/index.html` as a `file://` URL; browsers block the data requests in that mode. Vega, Vega-Lite and Vega-Embed are bundled in `docs/vendor/`, so the page does not depend on a CDN.
 
-## Data and method
+## Publishing on GitHub Pages
 
-`scripts/build_data.py` reads the supplied ABS and AusPlay CSV extracts and writes the compact data file used by the charts. It converts AusPlay rates from fractions to percentages and leaves the source CSVs unchanged. Run it from the repository root:
+In the repository on GitHub, go to **Settings → Pages**, set **Source** to *Deploy from a branch*, and choose branch `main` with folder `/docs`. The page will then be served at the live URL above.
 
-```bash
-python3 scripts/build_data.py
-```
+## Use of generative AI
 
-The state map uses the ABS 2021 generalised state and territory boundary layer ([STE_GEN](https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/STE/MapServer/1)). `scripts/prepare_boundaries.py` documents the service query and prepares its GeoJSON for Vega. It retains each state or territory's largest mainland or main-island polygon for a small national display, and the page shows the ACT separately.
-
-The page links to the original [ABS Time Use](https://www.abs.gov.au/statistics/people/people-and-communities/how-australians-use-their-time/latest-release), [ABS General Social Survey](https://www.abs.gov.au/statistics/people/people-and-communities/general-social-survey-summary-results-australia/latest-release), [AusPlay](https://www.sportaus.gov.au/ausplay), and [ABS boundaries](https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs/edition-3-july-2021-june-2026/access-and-downloads/digital-boundary-files) pages.
-
-## Before submission
-
-This is a critique draft. Confirm the final chart interpretations, check the exact survey notes and reliability flags, and publish the assessed version as a publicly accessible GitHub Page. The assignment specification says only Vega or Vega-Lite visuals are marked; all chart marks in this draft use them.
+Generative AI (Claude) was used to help write code, chart specifications, layout and copy. The author checked the data and interpretations against the original sources.

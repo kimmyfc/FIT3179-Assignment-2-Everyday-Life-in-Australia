@@ -1,0 +1,56 @@
+[
+ {
+  "state": "NSW",
+  "weekly": 67.2,
+  "three": 47.9,
+  "yearly": 85.4
+ },
+ {
+  "state": "VIC",
+  "weekly": 70.5,
+  "three": 51.7,
+  "yearly": 87.5
+ },
+ {
+  "state": "QLD",
+  "weekly": 67.4,
+  "three": 49.6,
+  "yearly": 83.9
+ },
+ {
+  "state": "SA",
+  "weekly": 67.0,
+  "three": 48.6,
+  "yearly": 84.3
+ },
+ {
+  "state": "WA",
+  "weekly": 70.9,
+  "three": 52.5,
+  "yearly": 86.8
+ },
+ {
+  "state": "TAS",
+  "weekly": 69.4,
+  "three": 51.3,
+  "yearly": 87.0
+ },
+ {
+  "state": "NT",
+  "weekly": 73.0,
+  "three": 54.4,
+  "yearly": 89.3
+ },
+ {
+  "state": "ACT",
+  "weekly": 78.3,
+  "three": 59.2,
+  "yearly": 92.2
+ },
+ {
+  "state": "AUS",
+  "weekly": 68.8,
+  "three": 50.1,
+  "yearly": 85.9
+ }
+]

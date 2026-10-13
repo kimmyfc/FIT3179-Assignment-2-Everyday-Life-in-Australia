@@ -1,0 +1,18 @@
+[
+ {
+  "activity": "Personal care",
+  "minutes": 643.0
+ },
+ {
+  "activity": "Work & study",
+  "minutes": 252.0
+ },
+ {
+  "activity": "Unpaid work",
+  "minutes": 226.0
+ },
+ {
+  "activity": "Free time",
+  "minutes": 304.0
+ }
+]

@@ -1,4 +1,4 @@
-"""Build the small, attributed data extract used by the critique webpage.
+"""Build the small data files that the Vega-Lite specs in docs/specs/ load.
 
 Run from the repository root: python3 scripts/build_data.py
 The source CSVs remain untouched. Percentages in AusPlay are stored as fractions.
@@ -22,6 +22,8 @@ STATES = {
     "NT": "Ausplay_NT",
     "ACT": "AusPlay_ACT",
 }
+STATE_CODES = ["NSW", "VIC", "QLD", "SA", "WA", "TAS", "NT", "ACT"]
+LIBRARY_STATES = {"NSW": "NSW", "VIC": "Vic", "QLD": "QLD", "SA": "SA", "WA": "WA", "TAS": "Tas", "NT": "NT", "ACT": "ACT"}
 GSS_STATES = {"NSW": "NSW", "VIC": "Vic", "QLD": "Qld", "SA": "SA", "WA": "WA", "TAS": "Tas", "NT": "NT", "ACT": "ACT"}
 
 
@@ -159,10 +161,101 @@ def build():
         if row["state"] in centroids:
             row["longitude"], row["latitude"] = centroids[row["state"]]
 
-    data = {"routines": routines, "time_gender": time_gender, "sport": sport, "activities": activities, "community": community, "volunteer_hours": volunteer_hours, "trends": trends, "trust": trust, "satisfaction": satisfaction}
-    (OUT / "charts.json").write_text(json.dumps(data, separators=(",", ":")), encoding="utf-8")
-    print(f"Wrote {OUT / 'charts.json'}")
-    print("State rates:", {row["state"]: row["weekly"] for row in sport})
+    # Square cartogram: hand-placed tile corners that echo each state's position.
+    # Each square's side is proportional to the square root of its volunteer count,
+    # so its area is proportional to the count.
+    layout = {"WA": [15, 124], "NT": [161, 38], "SA": [177, 206], "QLD": [297, 57], "NSW": [294, 178], "VIC": [310, 306], "TAS": [345, 426], "ACT": [425, 276]}
+    by_state = {row["state"]: row for row in community}
+    tiles = []
+    for state, (x, y) in layout.items():
+        count = by_state[state]["volunteer_thousands"]
+        side = round(count ** 0.5 * 3, 1)
+        tiles.append({"state": state, "volunteer_thousands": count, "volunteer_rate": num(get_row(gss_rate, "Characteristic", "Has undertaken unpaid voluntary work through an organisation in last 12 months")[f"{GSS_STATES[state]} - Proportion (%)"]), "x": x, "x2": x + side, "y": y, "y2": y + side})
+
+    # Waffle: 100 cells per place, the first round(rate) of which are filled.
+    waffle = []
+    for row in community:
+        filled = round(row["lonely"])
+        for i in range(100):
+            waffle.append({"state": row["state"], "lonely": row["lonely"], "col": i % 20, "row": i // 20, "filled": i < filled})
+
+    # Diverging bars: centre each question's neutral share on zero.
+    trust_bars = []
+    for state in [r["state"] for r in community]:
+        for question, _ in questions:
+            by = {r["answer"]: r["rate"] for r in trust if r["state"] == state and r["question"] == question}
+            x = -(by["Disagree"] + by["Neutral"] / 2)
+            for answer in ["Disagree", "Neutral", "Agree"]:
+                trust_bars.append({"state": state, "question": question, "answer": answer, "rate": by[answer], "start": round(x, 2), "end": round(x + by[answer], 2)})
+                x += by[answer]
+
+    # Australian Public Library Statistical Report 2023-24 (ALIA / NSLA).
+    library = ROOT / "Australian_Public_Library"
+    five_year = rows(library / "national_five_year_comparison.csv")
+    library_trend = []
+    for label, indicator in [
+        ("Visits in person", "Library visits (physical)"),
+        ("Program attendances", "Program attendances"),
+        ("Digital loans", "Digital collection usage"),
+        ("Registered members", "Registered library members"),
+    ]:
+        row = get_row(five_year, "Indicator", indicator)
+        for year in ["2019-20", "2020-21", "2021-22", "2022-23", "2023-24"]:
+            library_trend.append({"measure": label, "year": year, "value": num(row[year])})
+    audiences = rows(library / "programs_participants_by_audience_2023_24.csv")
+    library_programs = []
+    audience_order = ["Early childhood", "Children", "Young adult", "Adults", "Seniors", "All ages"]
+    for row in audiences:
+        if row["Target audience"] not in audience_order:
+            continue
+        for state in STATE_CODES:
+            library_programs.append({"state": state, "audience": row["Target audience"], "order": audience_order.index(row["Target audience"]), "participants": num(row[LIBRARY_STATES[state]])})
+
+    # Scanlon Foundation Research Institute, Mapping Social Cohesion 2025, Figure 3.
+    belonging = []
+    for row in rows(ROOT / "Mapping_Social_Cohesion/figure_03_belonging_by_generation.csv"):
+        belonging.append({
+            "birthplace": "Born in Australia" if row["Birthplace"] == "Australian-born" else "Born overseas",
+            "generation": row["Generation"].split(" (")[0],
+            "before": num(row["2010-2012 adjusted (%)"]),
+            "now": num(row["2025 (%)"]),
+        })
+
+    # OpenStreetMap community facilities (Overpass export, October 2026).
+    places = []
+    with (ROOT / "osm_community_facilities.csv").open(newline="", encoding="utf-8-sig") as handle:
+        for row in csv.DictReader(handle):
+            lat, lon = num(row["lat"]), num(row["lon"])
+            # Keep the mainland and Tasmania; drop external territories.
+            if lat is None or not (-44 <= lat <= -10 and 112 <= lon <= 154):
+                continue
+            places.append([row["name"].strip() or "Unnamed", row["category"], round(lat, 3), round(lon, 3)])
+    labels = {"library": "Library", "community_centre": "Community centre", "sports_centre": "Sports centre"}
+    with (OUT / "community_places.csv").open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.writer(handle)
+        writer.writerow(["name", "type", "lat", "lon"])
+        for name, category, lat, lon in places:
+            writer.writerow([name, labels[category], lat, lon])
+
+    files = {
+        "routines": routines,
+        "time_gender": time_gender,
+        "sport": sport,
+        "activities": activities,
+        "community": community,
+        "volunteer_tiles": tiles,
+        "volunteer_hours": volunteer_hours,
+        "trends": trends,
+        "lonely_waffle": waffle,
+        "trust": trust_bars,
+        "satisfaction": satisfaction,
+        "library_trend": library_trend,
+        "library_programs": library_programs,
+        "belonging": belonging,
+    }
+    for name, values in files.items():
+        (OUT / f"{name}.json").write_text(json.dumps(values, indent=1) + "\n", encoding="utf-8")
+    print(f"Wrote {len(files)} JSON files and community_places.csv ({len(places)} places) to {OUT}")
 
 
 if __name__ == "__main__":

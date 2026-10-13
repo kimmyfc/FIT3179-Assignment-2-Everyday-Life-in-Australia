@@ -1,0 +1,87 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "description": "Treemap of formal volunteers in Australia by annual hours volunteered. Rectangle area is proportional to the number of people.",
+  "autosize": "none",
+  "height": 255,
+  "padding": 0,
+  "signals": [
+    {
+      "name": "width",
+      "init": "max(containerSize()[0], 260)",
+      "on": [{"events": "window:resize", "update": "max(containerSize()[0], 260)"}]
+    }
+  ],
+  "data": [
+    {
+      "name": "bands",
+      "url": "data/volunteer_hours.json"
+    },
+    {
+      "name": "tree",
+      "values": [{"band": "All formal volunteers", "thousands": 0}]
+    },
+    {
+      "name": "nodes",
+      "source": ["tree", "bands"],
+      "transform": [
+        {"type": "formula", "expr": "datum.band === 'All formal volunteers' ? null : 'All formal volunteers'", "as": "parentKey"},
+        {"type": "stratify", "key": "band", "parentKey": "parentKey"},
+        {"type": "treemap", "field": "thousands", "method": "squarify", "size": [{"signal": "width"}, {"signal": "height"}], "paddingInner": 4},
+        {"type": "filter", "expr": "datum.depth > 0"}
+      ]
+    }
+  ],
+  "scales": [
+    {
+      "name": "colour",
+      "type": "ordinal",
+      "domain": ["1–20 hours", "21–99 hours", "100+ hours"],
+      "range": ["#d7824b", "#ad4a3d", "#45778d"]
+    }
+  ],
+  "marks": [
+    {
+      "type": "rect",
+      "from": {"data": "nodes"},
+      "encode": {
+        "update": {
+          "x": {"field": "x0"},
+          "y": {"field": "y0"},
+          "x2": {"field": "x1"},
+          "y2": {"field": "y1"},
+          "fill": {"scale": "colour", "field": "band"},
+          "tooltip": {"signal": "{'Annual hours': datum.band, 'People': format(datum.thousands * 1000, ',.0f')}"}
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {"data": "nodes"},
+      "encode": {
+        "update": {
+          "x": {"signal": "datum.x0 + 10"},
+          "y": {"signal": "datum.y0 + 24"},
+          "fill": {"value": "#fffdf8"},
+          "font": {"value": "Georgia, serif"},
+          "fontSize": {"signal": "datum.x1 - datum.x0 < 150 ? 14 : 17"},
+          "text": {"field": "band"}
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {"data": "nodes"},
+      "encode": {
+        "update": {
+          "x": {"signal": "datum.x0 + 10"},
+          "y": {"signal": "datum.y0 + 42"},
+          "fill": {"value": "#fffdf8"},
+          "font": {"value": "Arial, sans-serif"},
+          "fontSize": {"signal": "datum.x1 - datum.x0 < 150 ? 11 : 13"},
+          "fontWeight": {"value": "bold"},
+          "text": {"signal": "format(datum.thousands / 1000, '.2f') + 'm people'"}
+        }
+      }
+    }
+  ]
+}
