@@ -15,7 +15,7 @@
       "encoding": {
         "x": {"field": "start", "type": "quantitative", "scale": {"domain": [-65, 85]}, "axis": {"title": "Share of people aged 15+ (%)", "labelExpr": "abs(datum.value)"}},
         "x2": {"field": "end"},
-        "color": {"field": "answer", "type": "nominal", "scale": {"domain": ["Disagree", "Neutral", "Agree"], "range": ["#ad4a3d", "#d9cabc", "#45778d"]}, "legend": null},
+        "color": {"field": "answer", "type": "nominal", "scale": {"domain": ["Disagree", "Neutral", "Agree"], "range": ["#F76707", "#CDD3E0", "#1C7ED6"]}, "legend": null},
         "tooltip": [
           {"field": "question", "title": "Trust in"},
           {"field": "answer", "title": "Answer"},
@@ -24,12 +24,12 @@
       }
     },
     {
-      "mark": {"type": "rule", "color": "#24243b", "strokeWidth": 1},
+      "mark": {"type": "rule", "color": "#1B1F4B", "strokeWidth": 1},
       "encoding": {"x": {"datum": 0}, "y": null}
     },
     {
       "transform": [{"filter": "datum.answer === 'Agree'"}],
-      "mark": {"type": "text", "align": "left", "dx": 6, "fontSize": 11, "fontWeight": "bold", "color": "#45778d"},
+      "mark": {"type": "text", "align": "left", "dx": 6, "fontSize": 11, "fontWeight": "bold", "color": "#1C7ED6"},
       "encoding": {"x": {"field": "end", "type": "quantitative"}, "text": {"field": "rate", "type": "quantitative", "format": ".0f"}}
     }
   ]

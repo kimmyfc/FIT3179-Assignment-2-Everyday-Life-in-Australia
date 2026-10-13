@@ -7,7 +7,7 @@
   "layer": [
     {
       "data": {"url": "data/aus-states.geojson", "format": {"type": "json", "property": "features"}},
-      "mark": {"type": "geoshape", "fill": "#ebe2d7", "stroke": "#fffdf8", "strokeWidth": 1.2}
+      "mark": {"type": "geoshape", "fill": "#E3E9F4", "stroke": "#FFFFFF", "strokeWidth": 1.2}
     },
     {
       "data": {"url": "data/community_places.csv", "format": {"type": "csv", "parse": {"lat": "number", "lon": "number"}}},
@@ -21,7 +21,7 @@
         "color": {
           "field": "type",
           "type": "nominal",
-          "scale": {"domain": ["Library", "Community centre", "Sports centre"], "range": ["#ad4a3d", "#45778d", "#e2b04d"]},
+          "scale": {"domain": ["Library", "Community centre", "Sports centre"], "range": ["#F76707", "#1C7ED6", "#7048E8"]},
           "legend": {"orient": "bottom", "title": "Click a type to highlight it", "symbolOpacity": 1, "symbolSize": 90}
         },
         "opacity": {"condition": {"param": "placeType", "value": 0.65}, "value": 0.04},

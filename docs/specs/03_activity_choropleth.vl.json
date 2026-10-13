@@ -15,10 +15,10 @@
       "field": "weekly",
       "type": "quantitative",
       "title": "Active at least weekly (%)",
-      "scale": {"domain": [65, 80], "range": ["#f7dbb8", "#ad4a3d"]},
+      "scale": {"domain": [65, 80], "range": ["#FFF3BF", "#F76707"]},
       "legend": {"orient": "bottom", "gradientLength": 170}
     },
-    "stroke": {"condition": {"test": "datum.properties.state === focus", "value": "#24243b"}, "value": "#fffdf8"},
+    "stroke": {"condition": {"test": "datum.properties.state === focus", "value": "#1B1F4B"}, "value": "#FFFFFF"},
     "strokeWidth": {"condition": {"test": "datum.properties.state === focus", "value": 3}, "value": 1.2},
     "tooltip": [
       {"field": "properties.name", "type": "nominal", "title": "Place"},

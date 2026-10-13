@@ -6,6 +6,9 @@
   <meta name="description" content="Everyday Life in Australia: an interactive data story combining ABS, AusPlay, public library, Scanlon and OpenStreetMap data on time, recreation, shared places, community and wellbeing.">
   <meta name="author" content="kimmyfc">
   <title>Everyday Life in Australia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&display=swap">
   <link rel="stylesheet" href="styles.css">
   <script defer src="vendor/vega.min.js"></script>
   <script defer src="vendor/vega-lite.min.js"></script>
@@ -14,6 +17,8 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to the story</a>
+  <div class="frame frame-left" aria-hidden="true"></div>
+  <div class="frame frame-right" aria-hidden="true"></div>
   <header class="site-header">
     <a class="brand" href="#top" aria-label="Everyday Australia, back to top"><span class="brand-mark">EA<span class="brand-dot">.</span></span><span>EVERYDAY<br>AUSTRALIA</span></a>
     <nav aria-label="Story sections">
@@ -33,8 +38,8 @@
         <p class="hero-deck">Where do Australians spend their days, which shared places do they use, and are the connections they make holding up? Follow five datasets from a single day to the communities we build together.</p>
         <a class="hero-link" href="#routines">Explore the story <span aria-hidden="true">↘</span></a>
       </div>
-      <div class="hero-art" aria-hidden="true"><span class="art-ring"></span><span class="art-disc"></span><span class="art-square"></span><span class="art-line"></span><span class="art-tiny"></span></div>
-      <div class="hero-index"><span>TIME</span><span class="index-line"></span><span>PLAY</span><span class="index-line"></span><span>PLACES</span><span class="index-line"></span><span>CONNECT</span></div>
+      <img class="hero-sun" src="img/sun.svg" alt="" aria-hidden="true">
+      <img class="hero-scene" src="img/harbour.svg" alt="" aria-hidden="true" width="1200" height="420">
     </section>
 
     <section class="story-section" id="routines">

@@ -17,7 +17,7 @@
       "transform": [
         {"aggregate": [{"op": "min", "field": "minutes", "as": "low"}, {"op": "max", "field": "minutes", "as": "high"}], "groupby": ["activity"]}
       ],
-      "mark": {"type": "rule", "strokeWidth": 4, "color": "#d8c6bc"},
+      "mark": {"type": "rule", "strokeWidth": 4, "color": "#CDD3E0"},
       "encoding": {
         "x": {"field": "low", "type": "quantitative", "scale": {"domain": [0, 340]}, "axis": {"title": "Minutes per day"}},
         "x2": {"field": "high"}
@@ -30,7 +30,7 @@
         "color": {
           "field": "sex",
           "type": "nominal",
-          "scale": {"domain": ["Men", "Women"], "range": ["#45778d", "#ad4a3d"]},
+          "scale": {"domain": ["Men", "Women"], "range": ["#1C7ED6", "#F76707"]},
           "legend": {"orient": "bottom", "title": null}
         },
         "tooltip": [
@@ -41,7 +41,7 @@
       }
     },
     {
-      "mark": {"type": "text", "dy": -14, "fontSize": 11, "color": "#696775"},
+      "mark": {"type": "text", "dy": -14, "fontSize": 11, "color": "#5C5F7A"},
       "encoding": {
         "x": {"field": "minutes", "type": "quantitative"},
         "text": {"field": "minutes", "type": "quantitative", "format": ".0f"}

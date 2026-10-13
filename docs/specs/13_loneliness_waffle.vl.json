@@ -6,11 +6,11 @@
   "transform": [{"filter": "datum.state === focus"}],
   "width": "container",
   "height": 170,
-  "mark": {"type": "rect", "cornerRadius": 2, "stroke": "#fffdf8", "strokeWidth": 2},
+  "mark": {"type": "rect", "cornerRadius": 2, "stroke": "#FFFFFF", "strokeWidth": 2},
   "encoding": {
     "x": {"field": "col", "type": "ordinal", "axis": null},
     "y": {"field": "row", "type": "ordinal", "axis": null},
-    "color": {"field": "filled", "type": "nominal", "scale": {"domain": [true, false], "range": ["#ad4a3d", "#e9d9ca"]}, "legend": null},
+    "color": {"field": "filled", "type": "nominal", "scale": {"domain": [true, false], "range": ["#F76707", "#E3E9F4"]}, "legend": null},
     "tooltip": [
       {"field": "state", "title": "Place"},
       {"field": "lonely", "type": "quantitative", "title": "Often feel very lonely (%)", "format": ".1f"}

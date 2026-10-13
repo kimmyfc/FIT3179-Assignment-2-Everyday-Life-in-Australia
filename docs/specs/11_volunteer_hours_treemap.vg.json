@@ -36,7 +36,7 @@
       "name": "colour",
       "type": "ordinal",
       "domain": ["1–20 hours", "21–99 hours", "100+ hours"],
-      "range": ["#d7824b", "#ad4a3d", "#45778d"]
+      "range": ["#FAB005", "#F76707", "#1C7ED6"]
     }
   ],
   "marks": [
@@ -61,7 +61,7 @@
         "update": {
           "x": {"signal": "datum.x0 + 10"},
           "y": {"signal": "datum.y0 + 24"},
-          "fill": {"value": "#fffdf8"},
+          "fill": {"value": "#FFFFFF"},
           "font": {"value": "Georgia, serif"},
           "fontSize": {"signal": "datum.x1 - datum.x0 < 150 ? 14 : 17"},
           "text": {"field": "band"}
@@ -75,7 +75,7 @@
         "update": {
           "x": {"signal": "datum.x0 + 10"},
           "y": {"signal": "datum.y0 + 42"},
-          "fill": {"value": "#fffdf8"},
+          "fill": {"value": "#FFFFFF"},
           "font": {"value": "Arial, sans-serif"},
           "fontSize": {"signal": "datum.x1 - datum.x0 < 150 ? 11 : 13"},
           "fontWeight": {"value": "bold"},

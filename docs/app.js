@@ -9,11 +9,11 @@ const theme = {
   font: 'Arial, Helvetica, sans-serif',
   view: {stroke: null},
   axis: {
-    labelColor: '#696775', titleColor: '#696775', domainColor: '#e2d8c8', tickColor: '#e2d8c8',
-    gridColor: '#eee7dc', labelFontSize: 12, titleFontSize: 12, titleFontWeight: 'normal'
+    labelColor: '#5C5F7A', titleColor: '#5C5F7A', domainColor: '#CDD3E0', tickColor: '#CDD3E0',
+    gridColor: '#EEF2F8', labelFontSize: 12, titleFontSize: 12, titleFontWeight: 'normal'
   },
-  legend: {labelColor: '#696775', titleColor: '#696775', labelFontSize: 12, titleFontSize: 12, titleFontWeight: 'normal'},
-  header: {labelColor: '#24243b'}
+  legend: {labelColor: '#5C5F7A', titleColor: '#5C5F7A', labelFontSize: 12, titleFontSize: 12, titleFontWeight: 'normal'},
+  header: {labelColor: '#1B1F4B'}
 };
 
 const charts = {

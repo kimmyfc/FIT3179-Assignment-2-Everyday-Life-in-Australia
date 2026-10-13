@@ -10,7 +10,7 @@
     "color": {
       "field": "age",
       "type": "nominal",
-      "scale": {"domain": ["15-24", "35-44", "65+"], "range": ["#ad4a3d", "#d7824b", "#45778d"]},
+      "scale": {"domain": ["15-24", "35-44", "65+"], "range": ["#F76707", "#FAB005", "#1C7ED6"]},
       "legend": null
     }
   },

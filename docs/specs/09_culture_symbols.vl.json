@@ -7,12 +7,12 @@
   "layer": [
     {
       "data": {"url": "data/aus-states.geojson", "format": {"type": "json", "property": "features"}},
-      "mark": {"type": "geoshape", "fill": "#ebe2d7", "stroke": "#fffdf8", "strokeWidth": 1}
+      "mark": {"type": "geoshape", "fill": "#E3E9F4", "stroke": "#FFFFFF", "strokeWidth": 1}
     },
     {
       "data": {"url": "data/community.json"},
       "transform": [{"filter": "datum.state !== 'AUS'"}],
-      "mark": {"type": "circle", "fill": "#ad4a3d", "stroke": "#fff7e8", "strokeWidth": 1.3, "opacity": 0.8},
+      "mark": {"type": "circle", "fill": "#F76707", "stroke": "#FFF8E1", "strokeWidth": 1.3, "opacity": 0.8},
       "encoding": {
         "longitude": {"field": "longitude", "type": "quantitative"},
         "latitude": {"field": "latitude", "type": "quantitative"},
@@ -20,7 +20,7 @@
           "field": "cultural_thousands",
           "type": "quantitative",
           "scale": {"domain": [0, 5400], "range": [0, 3800]},
-          "legend": {"orient": "bottom", "title": "Attendees (thousands)", "values": [200, 1000, 3000, 5000], "symbolFillColor": "#ad4a3d", "symbolStrokeColor": "#fff7e8"}
+          "legend": {"orient": "bottom", "title": "Attendees (thousands)", "values": [200, 1000, 3000, 5000], "symbolFillColor": "#F76707", "symbolStrokeColor": "#FFF8E1"}
         },
         "tooltip": [
           {"field": "state", "title": "Place"},
@@ -32,7 +32,7 @@
     {
       "data": {"url": "data/community.json"},
       "transform": [{"filter": "datum.state !== 'AUS' && datum.cultural_thousands > 600"}],
-      "mark": {"type": "text", "fontSize": 11, "fontWeight": "bold", "color": "#fffdf8"},
+      "mark": {"type": "text", "fontSize": 11, "fontWeight": "bold", "color": "#FFFFFF"},
       "encoding": {
         "longitude": {"field": "longitude", "type": "quantitative"},
         "latitude": {"field": "latitude", "type": "quantitative"},

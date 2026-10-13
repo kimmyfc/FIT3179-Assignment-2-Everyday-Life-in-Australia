@@ -15,30 +15,30 @@
     "color": {
       "field": "measure",
       "type": "nominal",
-      "scale": {"domain": ["Digital loans", "Program attendances", "Visits in person", "Registered members"], "range": ["#45778d", "#d7824b", "#ad4a3d", "#6b4c69"]},
+      "scale": {"domain": ["Digital loans", "Program attendances", "Visits in person", "Registered members"], "range": ["#1C7ED6", "#FAB005", "#F76707", "#7048E8"]},
       "legend": null
     }
   },
   "layer": [
     {
       "data": {"values": [{"from": "2020-21", "to": "2021-22"}]},
-      "mark": {"type": "rect", "color": "#f1e4d2", "opacity": 0.8},
+      "mark": {"type": "rect", "color": "#EEF2F8", "opacity": 0.8},
       "encoding": {
         "x": {"field": "from", "type": "ordinal"},
         "x2": {"field": "to"},
         "y": {"value": 0},
         "y2": {"value": 300},
-        "color": {"value": "#f1e4d2"}
+        "color": {"value": "#EEF2F8"}
       }
     },
     {
       "data": {"values": [{"year": "2020-21", "label": "COVID-19 closures"}]},
-      "mark": {"type": "text", "align": "left", "baseline": "top", "dx": 4, "dy": 6, "fontSize": 11, "fontStyle": "italic", "color": "#696775"},
-      "encoding": {"x": {"field": "year", "type": "ordinal"}, "y": {"value": 0}, "text": {"field": "label"}, "color": {"value": "#696775"}}
+      "mark": {"type": "text", "align": "left", "baseline": "top", "dx": 4, "dy": 6, "fontSize": 11, "fontStyle": "italic", "color": "#5C5F7A"},
+      "encoding": {"x": {"field": "year", "type": "ordinal"}, "y": {"value": 0}, "text": {"field": "label"}, "color": {"value": "#5C5F7A"}}
     },
     {
-      "mark": {"type": "rule", "color": "#b8b2a8", "strokeDash": [3, 3]},
-      "encoding": {"y": {"datum": 100}, "x": null, "color": {"value": "#b8b2a8"}}
+      "mark": {"type": "rule", "color": "#A9AFC2", "strokeDash": [3, 3]},
+      "encoding": {"y": {"datum": 100}, "x": null, "color": {"value": "#A9AFC2"}}
     },
     {
       "mark": {"type": "line", "strokeWidth": 3, "point": {"filled": true, "size": 60}},

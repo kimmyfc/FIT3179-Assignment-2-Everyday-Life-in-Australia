@@ -11,12 +11,12 @@
   },
   "layer": [
     {
-      "mark": {"type": "rect", "stroke": "#fffdf8", "strokeWidth": 3},
+      "mark": {"type": "rect", "stroke": "#FFFFFF", "strokeWidth": 3},
       "encoding": {
         "color": {
           "field": "rate",
           "type": "quantitative",
-          "scale": {"domain": [0, 60], "range": ["#f8e5ca", "#ad4a3d"]},
+          "scale": {"domain": [0, 60], "range": ["#FFF3BF", "#F76707"]},
           "legend": {"orient": "bottom", "title": "Participation (%)", "gradientLength": 160}
         },
         "opacity": {"condition": {"test": "focus === 'AUS' || datum.state === focus", "value": 1}, "value": 0.35},
@@ -31,7 +31,7 @@
       "mark": {"type": "text", "fontSize": 12},
       "encoding": {
         "text": {"field": "rate", "type": "quantitative", "format": ".0f"},
-        "color": {"condition": {"test": "datum.rate > 35", "value": "#fffdf8"}, "value": "#24243b"},
+        "color": {"condition": {"test": "datum.rate > 35", "value": "#FFFFFF"}, "value": "#1B1F4B"},
         "opacity": {"condition": {"test": "focus === 'AUS' || datum.state === focus", "value": 1}, "value": 0.35}
       }
     }

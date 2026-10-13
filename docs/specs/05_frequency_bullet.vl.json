@@ -18,7 +18,7 @@
       "mark": {"type": "bar", "height": 22, "cornerRadiusEnd": 2},
       "encoding": {
         "x": {"field": "three", "type": "quantitative", "scale": {"domain": [0, 65]}, "axis": {"title": "Active three or more times a week (%)", "tickCount": 7}},
-        "color": {"condition": {"test": "datum.state === focus", "value": "#ad4a3d"}, "value": "#d7824b"},
+        "color": {"condition": {"test": "datum.state === focus", "value": "#F76707"}, "value": "#74C0FC"},
         "tooltip": [
           {"field": "state", "title": "Place"},
           {"field": "three", "type": "quantitative", "title": "3+ times a week (%)", "format": ".1f"},
@@ -27,11 +27,11 @@
       }
     },
     {
-      "mark": {"type": "tick", "thickness": 3, "size": 30, "color": "#24243b"},
+      "mark": {"type": "tick", "thickness": 3, "size": 30, "color": "#1B1F4B"},
       "encoding": {"x": {"field": "benchmark", "type": "quantitative"}}
     },
     {
-      "mark": {"type": "text", "align": "left", "dx": 6, "fontSize": 11, "color": "#24243b"},
+      "mark": {"type": "text", "align": "left", "dx": 6, "fontSize": 11, "color": "#1B1F4B"},
       "encoding": {
         "x": {"field": "three", "type": "quantitative"},
         "text": {"field": "three", "type": "quantitative", "format": ".1f"}

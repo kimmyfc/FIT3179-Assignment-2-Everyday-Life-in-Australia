@@ -15,11 +15,11 @@
   },
   "layer": [
     {
-      "mark": {"type": "rect", "stroke": "#fff7e8", "strokeWidth": 2},
+      "mark": {"type": "rect", "stroke": "#FFF8E1", "strokeWidth": 2},
       "encoding": {
         "x2": {"field": "x2"},
         "y2": {"field": "y2"},
-        "color": {"condition": {"test": "datum.state === focus", "value": "#ad4a3d"}, "value": "#45778d"},
+        "color": {"condition": {"test": "datum.state === focus", "value": "#F76707"}, "value": "#1C7ED6"},
         "tooltip": [
           {"field": "state", "title": "Place"},
           {"field": "volunteer_thousands", "type": "quantitative", "title": "Formal volunteers (thousands)", "format": ",.1f"},
@@ -29,17 +29,17 @@
     },
     {
       "transform": [{"filter": "datum.volunteer_thousands > 100"}],
-      "mark": {"type": "text", "fontWeight": "bold", "fontSize": 12, "color": "#fffdf8", "baseline": "bottom"},
+      "mark": {"type": "text", "fontWeight": "bold", "fontSize": 12, "color": "#FFFFFF", "baseline": "bottom"},
       "encoding": {"x": {"field": "cx", "type": "quantitative"}, "y": {"field": "cy", "type": "quantitative"}, "text": {"field": "state"}}
     },
     {
       "transform": [{"filter": "datum.volunteer_thousands <= 100"}],
-      "mark": {"type": "text", "fontWeight": "bold", "fontSize": 11, "color": "#24243b", "baseline": "bottom", "dy": -4},
+      "mark": {"type": "text", "fontWeight": "bold", "fontSize": 11, "color": "#1B1F4B", "baseline": "bottom", "dy": -4},
       "encoding": {"x": {"field": "cx", "type": "quantitative"}, "y": {"field": "y", "type": "quantitative"}, "text": {"field": "state"}}
     },
     {
       "transform": [{"filter": "datum.volunteer_thousands > 100"}],
-      "mark": {"type": "text", "fontSize": 11, "color": "#fffdf8", "baseline": "top", "dy": 2},
+      "mark": {"type": "text", "fontSize": 11, "color": "#FFFFFF", "baseline": "top", "dy": 2},
       "encoding": {"x": {"field": "cx", "type": "quantitative"}, "y": {"field": "cy", "type": "quantitative"}, "text": {"field": "volunteer_thousands", "type": "quantitative", "format": ",.0f"}}
     }
   ]

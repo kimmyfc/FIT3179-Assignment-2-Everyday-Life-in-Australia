@@ -9,7 +9,7 @@
     {"lookup": "properties.state", "from": {"data": {"url": "data/sport.json"}, "key": "state", "fields": ["weekly"]}}
   ],
   "projection": {"type": "conicEqualArea", "rotate": [-149, 0], "parallels": [-18, -36]},
-  "mark": {"type": "geoshape", "fill": "#ad4a3d", "stroke": "#24243b", "strokeWidth": 1},
+  "mark": {"type": "geoshape", "fill": "#F76707", "stroke": "#1B1F4B", "strokeWidth": 1},
   "encoding": {
     "tooltip": [
       {"field": "properties.name", "type": "nominal", "title": "Place"},

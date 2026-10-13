@@ -10,7 +10,7 @@
     "color": {
       "field": "series",
       "type": "nominal",
-      "scale": {"domain": ["Social groups", "Formal volunteering", "Support groups"], "range": ["#45778d", "#ad4a3d", "#d7824b"]},
+      "scale": {"domain": ["Social groups", "Formal volunteering", "Support groups"], "range": ["#1C7ED6", "#F76707", "#FAB005"]},
       "legend": {"orient": "bottom", "title": null}
     }
   },

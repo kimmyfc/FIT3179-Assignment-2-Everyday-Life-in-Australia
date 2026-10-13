@@ -21,11 +21,11 @@
     },
     "layer": [
       {
-        "mark": {"type": "rule", "strokeWidth": 3, "color": "#d8c6bc"},
+        "mark": {"type": "rule", "strokeWidth": 3, "color": "#CDD3E0"},
         "encoding": {"x": {"field": "before", "type": "quantitative", "axis": {"title": "Great sense of belonging (%)"}}, "x2": {"field": "now"}}
       },
       {
-        "mark": {"type": "point", "size": 110, "filled": false, "strokeWidth": 2, "color": "#696775"},
+        "mark": {"type": "point", "size": 110, "filled": false, "strokeWidth": 2, "color": "#5C5F7A"},
         "encoding": {
           "x": {"field": "before", "type": "quantitative"},
           "tooltip": [
@@ -35,7 +35,7 @@
         }
       },
       {
-        "mark": {"type": "point", "size": 130, "filled": true, "color": "#6b4c69", "opacity": 1},
+        "mark": {"type": "point", "size": 130, "filled": true, "color": "#7048E8", "opacity": 1},
         "encoding": {
           "x": {"field": "now", "type": "quantitative"},
           "tooltip": [
@@ -47,7 +47,7 @@
         }
       },
       {
-        "mark": {"type": "text", "align": "right", "dx": -10, "fontSize": 11, "fontWeight": "bold", "color": "#6b4c69"},
+        "mark": {"type": "text", "align": "right", "dx": -10, "fontSize": 11, "fontWeight": "bold", "color": "#7048E8"},
         "encoding": {"x": {"field": "now", "type": "quantitative"}, "text": {"field": "now", "type": "quantitative", "format": ".0f"}}
       }
     ]

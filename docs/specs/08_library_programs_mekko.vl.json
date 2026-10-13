@@ -20,7 +20,7 @@
   },
   "layer": [
     {
-      "mark": {"type": "rect", "stroke": "#fffdf8", "strokeWidth": 1.5},
+      "mark": {"type": "rect", "stroke": "#FFFFFF", "strokeWidth": 1.5},
       "encoding": {
         "x2": {"field": "x1"},
         "y2": {"field": "y1"},
@@ -28,7 +28,7 @@
           "field": "audience",
           "type": "nominal",
           "sort": ["Early childhood", "Children", "Young adult", "Adults", "Seniors", "All ages"],
-          "scale": {"domain": ["Early childhood", "Children", "Young adult", "Adults", "Seniors", "All ages"], "range": ["#ad4a3d", "#d7824b", "#e2b04d", "#45778d", "#6b4c69", "#cbbfb3"]},
+          "scale": {"domain": ["Early childhood", "Children", "Young adult", "Adults", "Seniors", "All ages"], "range": ["#F76707", "#FCC419", "#15AABF", "#1C7ED6", "#7048E8", "#C5CBD9"]},
           "legend": {"orient": "bottom", "title": null, "columns": 3, "symbolType": "square"}
         },
         "tooltip": [
@@ -42,12 +42,12 @@
     },
     {
       "transform": [{"filter": "datum.order === 0 && datum.stateShare > 0.035"}],
-      "mark": {"type": "text", "baseline": "bottom", "dy": -6, "fontWeight": "bold", "fontSize": 12, "color": "#24243b"},
+      "mark": {"type": "text", "baseline": "bottom", "dy": -6, "fontWeight": "bold", "fontSize": 12, "color": "#1B1F4B"},
       "encoding": {"x": {"field": "xMid", "type": "quantitative"}, "y": {"datum": 0}, "text": {"field": "state"}}
     },
     {
       "transform": [{"filter": "datum.audienceShare > 0.12 && datum.stateShare > 0.07"}],
-      "mark": {"type": "text", "fontSize": 11, "color": "#fffdf8", "fontWeight": "bold"},
+      "mark": {"type": "text", "fontSize": 11, "color": "#FFFFFF", "fontWeight": "bold"},
       "encoding": {"x": {"field": "xMid", "type": "quantitative"}, "y": {"field": "yMid", "type": "quantitative"}, "text": {"field": "audienceShare", "type": "quantitative", "format": ".0%"}}
     }
   ]

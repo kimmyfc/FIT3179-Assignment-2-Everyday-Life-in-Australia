@@ -20,7 +20,7 @@
   },
   "layer": [
     {
-      "mark": {"type": "bar", "cornerRadiusEnd": 3, "color": "#ad4a3d"},
+      "mark": {"type": "bar", "cornerRadiusEnd": 3, "color": "#F76707"},
       "encoding": {
         "tooltip": [
           {"field": "activity", "title": "Activity"},
@@ -29,7 +29,7 @@
       }
     },
     {
-      "mark": {"type": "text", "align": "left", "dx": 7, "fontWeight": "bold", "color": "#24243b"},
+      "mark": {"type": "text", "align": "left", "dx": 7, "fontWeight": "bold", "color": "#1B1F4B"},
       "encoding": {"text": {"field": "minutes", "type": "quantitative", "format": ".0f"}}
     }
   ]
