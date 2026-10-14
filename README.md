@@ -4,7 +4,7 @@
 
 **Live page:** https://kimmyfc.github.io/FIT3179-Assignment-2-Everyday-Life-in-Australia/
 
-Author: kimmyfc · Last updated 13 October 2026
+Author: Kimberley Carlile (33882959) · Last updated 14 October 2026
 
 ## Chart specifications
 
