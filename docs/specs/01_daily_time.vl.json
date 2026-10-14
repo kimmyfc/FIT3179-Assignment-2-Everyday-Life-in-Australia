@@ -1,36 +1,93 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Average minutes per day spent on four activity groups, total Australian population.",
-  "data": {"url": "data/routines.json"},
-  "width": "container",
-  "height": 240,
-  "encoding": {
-    "y": {
-      "field": "activity",
-      "type": "nominal",
-      "sort": ["Personal care", "Work & study", "Unpaid work", "Free time"],
-      "axis": {"title": null, "labelPadding": 8}
-    },
-    "x": {
-      "field": "minutes",
-      "type": "quantitative",
-      "scale": {"domain": [0, 700]},
-      "axis": {"title": "Minutes per day", "tickCount": 5}
-    }
-  },
+  "description": "Radial bar chart on a 24-hour dial: average minutes per day spent on four activity groups, total Australian population. A full ring would be the whole 24-hour day.",
+  "width": 380,
+  "height": 380,
+  "view": {"stroke": null},
   "layer": [
     {
-      "mark": {"type": "bar", "cornerRadiusEnd": 3, "color": "#F76707"},
+      "description": "Light background track for each ring, showing a full day.",
+      "data": {"url": "data/routines.json"},
+      "transform": [
+        {"window": [{"op": "rank", "as": "ring"}], "sort": [{"field": "minutes", "order": "descending"}]},
+        {"calculate": "160 - (datum.ring - 1) * 30", "as": "r_outer"},
+        {"calculate": "datum.r_outer - 22", "as": "r_inner"}
+      ],
+      "mark": {"type": "arc", "color": "#EEF2F8", "cornerRadius": 11},
       "encoding": {
+        "theta": {"datum": 0, "scale": null},
+        "theta2": {"datum": 6.2832},
+        "radius": {"field": "r_inner", "type": "quantitative", "scale": null},
+        "radius2": {"field": "r_outer"}
+      }
+    },
+    {
+      "description": "Each ring's arc length is the share of a 24-hour day (1,440 minutes) spent on that activity.",
+      "data": {"url": "data/routines.json"},
+      "transform": [
+        {"window": [{"op": "rank", "as": "ring"}], "sort": [{"field": "minutes", "order": "descending"}]},
+        {"calculate": "160 - (datum.ring - 1) * 30", "as": "r_outer"},
+        {"calculate": "datum.r_outer - 22", "as": "r_inner"},
+        {"calculate": "datum.minutes / 1440 * 2 * PI", "as": "angle"},
+        {"calculate": "floor(datum.minutes / 60) + 'h ' + (datum.minutes % 60) + 'm'", "as": "duration"}
+      ],
+      "mark": {"type": "arc", "cornerRadius": 11},
+      "encoding": {
+        "theta": {"datum": 0, "scale": null},
+        "theta2": {"field": "angle", "type": "quantitative"},
+        "radius": {"field": "r_inner", "type": "quantitative", "scale": null},
+        "radius2": {"field": "r_outer"},
+        "color": {
+          "field": "activity",
+          "type": "nominal",
+          "scale": {"domain": ["Personal care", "Free time", "Work & study", "Unpaid work"], "range": ["#F76707", "#1C7ED6", "#7048E8", "#FAB005"]},
+          "legend": null
+        },
         "tooltip": [
           {"field": "activity", "title": "Activity"},
+          {"field": "duration", "title": "Time per day"},
           {"field": "minutes", "type": "quantitative", "title": "Minutes per day"}
         ]
       }
     },
     {
-      "mark": {"type": "text", "align": "left", "dx": 7, "fontWeight": "bold", "color": "#1B1F4B"},
-      "encoding": {"text": {"field": "minutes", "type": "quantitative", "format": ".0f"}}
+      "description": "Ring labels sit just left of 12 o'clock, where every arc starts.",
+      "data": {"url": "data/routines.json"},
+      "transform": [
+        {"window": [{"op": "rank", "as": "ring"}], "sort": [{"field": "minutes", "order": "descending"}]},
+        {"calculate": "160 - (datum.ring - 1) * 30 - 11", "as": "r_mid"},
+        {"calculate": "datum.activity + '  ' + floor(datum.minutes / 60) + 'h ' + (datum.minutes % 60) + 'm'", "as": "label"}
+      ],
+      "mark": {"type": "text", "align": "right", "baseline": "middle", "dx": -8, "fontSize": 12, "fontWeight": "bold", "color": "#1B1F4B"},
+      "encoding": {
+        "theta": {"datum": 0, "scale": null},
+        "radius": {"field": "r_mid", "type": "quantitative", "scale": null},
+        "text": {"field": "label"}
+      }
+    },
+    {
+      "description": "Hour marks around the dial: 6, 12 and 18 hours of the day.",
+      "data": {"values": [{"h": 6}, {"h": 12}, {"h": 18}]},
+      "transform": [
+        {"calculate": "datum.h / 24 * 2 * PI", "as": "angle"},
+        {"calculate": "datum.h + 'h'", "as": "label"}
+      ],
+      "mark": {"type": "text", "fontSize": 11, "color": "#5C5F7A", "fontWeight": "bold"},
+      "encoding": {
+        "theta": {"field": "angle", "type": "quantitative", "scale": null},
+        "radius": {"datum": 178, "scale": null},
+        "text": {"field": "label"}
+      }
+    },
+    {
+      "data": {"values": [{"t": "24 hours"}]},
+      "mark": {"type": "text", "fontSize": 13, "fontWeight": "bold", "color": "#1B1F4B", "dy": -4},
+      "encoding": {"text": {"field": "t"}}
+    },
+    {
+      "data": {"values": [{"t": "in one day"}]},
+      "mark": {"type": "text", "fontSize": 11, "color": "#5C5F7A", "dy": 12},
+      "encoding": {"text": {"field": "t"}}
     }
   ]
 }
