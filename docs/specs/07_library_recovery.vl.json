@@ -37,6 +37,12 @@
       "encoding": {"x": {"field": "year", "type": "ordinal"}, "y": {"value": 0}, "text": {"field": "label"}, "color": {"value": "#5C5F7A"}}
     },
     {
+      "description": "Callout at the lowest point of the closures.",
+      "data": {"values": [{"year": "2021-22", "y": 47, "note": "Low point: programs at 55, visits at 67"}]},
+      "mark": {"type": "text", "align": "center", "fontSize": 11, "fontStyle": "italic", "color": "#3F4366"},
+      "encoding": {"x": {"field": "year", "type": "ordinal"}, "y": {"field": "y", "type": "quantitative"}, "text": {"field": "note"}, "color": {"value": "#3F4366"}}
+    },
+    {
       "mark": {"type": "rule", "color": "#A9AFC2", "strokeDash": [3, 3]},
       "encoding": {"y": {"datum": 100}, "x": null, "color": {"value": "#A9AFC2"}}
     },

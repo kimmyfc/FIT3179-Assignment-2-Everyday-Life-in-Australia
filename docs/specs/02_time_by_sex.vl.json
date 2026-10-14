@@ -41,6 +41,20 @@
       }
     },
     {
+      "description": "Annotations under each row describing the gap.",
+      "data": {"values": [
+        {"activity": "Housework", "x": 20, "note": "Women do about twice as much"},
+        {"activity": "Child care", "x": 20, "note": "26 more minutes for women"}
+      ]},
+      "mark": {"type": "text", "align": "left", "baseline": "top", "dy": 14, "fontSize": 11, "fontStyle": "italic", "color": "#3F4366"},
+      "encoding": {"x": {"field": "x", "type": "quantitative"}, "text": {"field": "note"}}
+    },
+    {
+      "data": {"values": [{"activity": "Free time", "x": 330, "note": "Men get 24 more minutes"}]},
+      "mark": {"type": "text", "align": "right", "baseline": "top", "dy": 14, "fontSize": 11, "fontStyle": "italic", "color": "#3F4366"},
+      "encoding": {"x": {"field": "x", "type": "quantitative"}, "text": {"field": "note"}}
+    },
+    {
       "mark": {"type": "text", "dy": -14, "fontSize": 11, "color": "#5C5F7A"},
       "encoding": {
         "x": {"field": "minutes", "type": "quantitative"},

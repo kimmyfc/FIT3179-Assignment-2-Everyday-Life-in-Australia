@@ -16,6 +16,16 @@
   },
   "layer": [
     {
+      "data": {"values": [{"year": 2020}]},
+      "mark": {"type": "rule", "strokeDash": [4, 4], "color": "#A9AFC2"},
+      "encoding": {"x": {"field": "year", "type": "quantitative"}, "y": null, "color": {"value": "#A9AFC2"}}
+    },
+    {
+      "data": {"values": [{"year": 2020.3, "score": 6.75, "note": "2020: the biggest drop, for 15–24s"}]},
+      "mark": {"type": "text", "align": "left", "fontSize": 11, "fontStyle": "italic", "color": "#3F4366"},
+      "encoding": {"text": {"field": "note"}, "color": {"value": "#3F4366"}}
+    },
+    {
       "mark": {"type": "line", "strokeWidth": 3, "point": {"filled": true, "size": 75}},
       "encoding": {
         "tooltip": [

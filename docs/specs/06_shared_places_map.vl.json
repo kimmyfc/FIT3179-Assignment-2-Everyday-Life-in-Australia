@@ -30,6 +30,15 @@
           {"field": "type", "title": "Type"}
         ]
       }
+    },
+    {
+      "description": "Callouts on where places are and are not.",
+      "data": {"values": [
+        {"lon": 133, "lat": -24.5, "note": "Very few places across the interior"},
+        {"lon": 122, "lat": -38.5, "note": "Most sit in coastal cities"}
+      ]},
+      "mark": {"type": "text", "align": "center", "fontSize": 12, "fontStyle": "italic", "color": "#3F4366"},
+      "encoding": {"longitude": {"field": "lon", "type": "quantitative"}, "latitude": {"field": "lat", "type": "quantitative"}, "text": {"field": "note"}}
     }
   ]
 }

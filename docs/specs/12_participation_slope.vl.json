@@ -32,13 +32,15 @@
     },
     {
       "transform": [
+        {"window": [{"op": "first_value", "field": "rate", "as": "start"}], "groupby": ["series"], "sort": [{"field": "year"}]},
         {"filter": "datum.year === 2025"},
+        {"calculate": "format(datum.rate, '.1f') + '  (' + format(datum.rate - datum.start, '+.1f') + ' pts)'", "as": "label"},
         {"calculate": "datum.rate + (datum.series === 'Formal volunteering' ? 1.3 : datum.series === 'Support groups' ? -1.3 : 0)", "as": "label_y"}
       ],
       "mark": {"type": "text", "align": "left", "dx": 10, "fontSize": 12, "fontWeight": "bold"},
       "encoding": {
         "y": {"field": "label_y", "type": "quantitative"},
-        "text": {"field": "rate", "type": "quantitative", "format": ".1f"}
+        "text": {"field": "label"}
       }
     }
   ]

@@ -38,6 +38,15 @@
       "encoding": {"x": {"field": "cx", "type": "quantitative"}, "y": {"field": "y", "type": "quantitative"}, "text": {"field": "state"}}
     },
     {
+      "description": "Volunteering rate callouts: square size shows counts, so the rates are noted separately.",
+      "data": {"values": [
+        {"x": 300, "y": 352, "note": "Lowest rate: VIC 21.8%"},
+        {"x": 335, "y": 443, "note": "Highest rate: TAS 27.5%"}
+      ]},
+      "mark": {"type": "text", "align": "right", "fontSize": 11, "fontStyle": "italic", "color": "#3F4366"},
+      "encoding": {"x": {"field": "x", "type": "quantitative"}, "y": {"field": "y", "type": "quantitative"}, "text": {"field": "note"}}
+    },
+    {
       "transform": [{"filter": "datum.volunteer_thousands > 100"}],
       "mark": {"type": "text", "fontSize": 11, "color": "#FFFFFF", "baseline": "top", "dy": 2},
       "encoding": {"x": {"field": "cx", "type": "quantitative"}, "y": {"field": "cy", "type": "quantitative"}, "text": {"field": "volunteer_thousands", "type": "quantitative", "format": ",.0f"}}

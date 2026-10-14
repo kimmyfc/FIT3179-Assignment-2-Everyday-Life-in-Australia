@@ -31,6 +31,16 @@
       "encoding": {"x": {"field": "benchmark", "type": "quantitative"}}
     },
     {
+      "transform": [{"filter": "datum.state === 'NSW'"}],
+      "mark": {"type": "text", "align": "center", "baseline": "bottom", "dy": -16, "fontSize": 11, "fontWeight": "bold", "color": "#1B1F4B"},
+      "encoding": {"x": {"field": "benchmark", "type": "quantitative"}, "text": {"value": "Australia 50.1%"}}
+    },
+    {
+      "transform": [{"filter": "datum.state === 'ACT'"}],
+      "mark": {"type": "text", "align": "left", "dx": 40, "fontSize": 11, "fontStyle": "italic", "color": "#3F4366"},
+      "encoding": {"x": {"field": "three", "type": "quantitative"}, "text": {"value": "highest"}}
+    },
+    {
       "mark": {"type": "text", "align": "left", "dx": 6, "fontSize": 11, "color": "#1B1F4B"},
       "encoding": {
         "x": {"field": "three", "type": "quantitative"},

@@ -38,6 +38,15 @@
         "latitude": {"field": "latitude", "type": "quantitative"},
         "text": {"field": "state"}
       }
+    },
+    {
+      "description": "Rates behind the circles, which show counts.",
+      "data": {"values": [
+        {"lon": 122, "lat": -38.2, "note": "Highest rates: ACT 89%, NT 83%"},
+        {"lon": 122, "lat": -40.4, "note": "Lowest: SA and NSW, about 77%"}
+      ]},
+      "mark": {"type": "text", "align": "center", "fontSize": 11, "fontStyle": "italic", "color": "#3F4366"},
+      "encoding": {"longitude": {"field": "lon", "type": "quantitative"}, "latitude": {"field": "lat", "type": "quantitative"}, "text": {"field": "note"}}
     }
   ]
 }

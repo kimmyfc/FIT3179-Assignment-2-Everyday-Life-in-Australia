@@ -47,6 +47,11 @@
         }
       },
       {
+        "transform": [{"filter": "datum.change <= -20"}],
+        "mark": {"type": "text", "align": "left", "dx": 12, "fontSize": 11, "fontStyle": "italic", "fontWeight": "bold", "color": "#F76707"},
+        "encoding": {"x": {"field": "before", "type": "quantitative"}, "text": {"field": "change", "type": "quantitative", "format": "+d"}}
+      },
+      {
         "mark": {"type": "text", "align": "right", "dx": -10, "fontSize": 11, "fontWeight": "bold", "color": "#7048E8"},
         "encoding": {"x": {"field": "now", "type": "quantitative"}, "text": {"field": "now", "type": "quantitative", "format": ".0f"}}
       }
