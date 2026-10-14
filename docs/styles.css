@@ -60,7 +60,6 @@ footer{position:relative;padding:95px max(5vw,30px) 24px;background:var(--ink);c
 .section-summary h3{display:inline-block;margin:0 0 14px;padding:4px 18px;background:var(--gold);border-radius:999px;font-size:20px}.reasons-col h3{background:var(--violet);color:#fff}
 .section-summary p{margin:0;font-size:17px;line-height:1.65}
 .reasons-col ul{margin:0;padding-left:20px;display:grid;gap:10px}.reasons-col li{font-size:16px;line-height:1.6}.reasons-col li::marker{color:var(--violet)}
-.section-summary .reasons-note{margin-top:14px;font-size:13px;color:var(--muted)}
 
 
 /* ---------- Playful touches ---------- */
