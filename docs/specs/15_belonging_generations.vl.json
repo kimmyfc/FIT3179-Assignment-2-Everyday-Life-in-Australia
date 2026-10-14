@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Arrow-style dumbbell chart: share of people reporting a great sense of belonging in Australia, by generation and birthplace, in 2010-12 (hollow point) and 2025 (filled point).",
+  "description": "Arrow-style dumbbell chart: share of people reporting a great sense of belonging in Australia, by generation and birthplace, in 2010–12 (hollow point) and 2025 (filled point).",
   "data": {"url": "data/belonging.json"},
   "transform": [{"calculate": "datum.now - datum.before", "as": "change"}],
   "facet": {

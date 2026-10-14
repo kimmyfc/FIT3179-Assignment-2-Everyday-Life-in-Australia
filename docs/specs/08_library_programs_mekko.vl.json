@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Marimekko chart of public library program participants in 2023-24. Column width shows each state's share of all participants; segment height shows the share by target audience within that state.",
+  "description": "Marimekko chart of public library program participants in 2023–24. Column width shows each state's share of all participants; segment height shows the share by target audience within that state.",
   "data": {"url": "data/library_programs.json"},
   "transform": [
     {"joinaggregate": [{"op": "sum", "field": "participants", "as": "stateTotal"}], "groupby": ["state"]},

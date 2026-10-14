@@ -35,8 +35,8 @@ h1{font-size:clamp(54px,7.8vw,116px);line-height:.95;margin-bottom:26px}em{font-
 .chart-no{flex:none;display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background:var(--card);color:#fff;font:600 22px/1 var(--display)}.chart-card:nth-child(4n+3) .chart-no{color:var(--ink)}
 h3{font-family:var(--display);font-size:28px;font-weight:700;line-height:1.1;margin:0 0 6px}.card-top p{color:var(--muted);font-size:13px;margin:0;line-height:1.4}
 .chart{min-height:240px;display:flex;align-items:center;justify-content:center;overflow:hidden;margin:15px 0 22px}.chart svg{max-width:100%;height:auto}
-.annotation{border-left:3px solid var(--card);padding:2px 0 2px 15px;font-size:15px;line-height:1.6;margin:18px 0}
-.source{font-size:11px;line-height:1.4;color:#6B6F88;margin:22px 0 0}.source a{color:var(--accent)}
+.annotation{border-left:3px solid var(--card);padding:2px 0 2px 15px;font-size:15px;line-height:1.6;margin:18px 0;max-width:72ch}
+.source{font-size:12px;line-height:1.5;color:#5C5F7A;margin:22px 0 0}.source a{color:var(--accent)}
 
 .map-card{grid-column:1}.map-layout{display:grid;grid-template-columns:minmax(0,1fr) 120px;gap:8px;align-items:center}.map-chart{min-height:320px}
 .map-aside{align-self:stretch;display:flex;flex-direction:column;justify-content:center;border-left:1px solid var(--line);padding-left:15px}.map-aside>div{display:flex;flex-direction:column;align-items:flex-start}.map-aside strong{font-family:var(--display);font-size:31px;color:var(--orange);font-weight:600}.map-aside span:last-child,.map-aside p{font-size:11px;line-height:1.4;color:var(--muted)}.map-aside p{margin-top:25px}
@@ -63,7 +63,7 @@ footer{position:relative;padding:95px max(5vw,30px) 24px;background:var(--ink);c
 .sum-stat span{font-size:16px;font-weight:700;line-height:1.4}
 .sum-text{padding:30px 36px}
 .section-summary h3{display:inline-block;margin:0 0 12px;padding:4px 18px;background:var(--gold);border-radius:999px;font-size:20px}.sum-4 h3{background:var(--violet);color:#fff}
-.section-summary p{margin:0;max-width:900px;font-size:17px;line-height:1.7}
+.section-summary p{margin:0;max-width:66ch;font-size:17px;line-height:1.7}
 
 
 /* ---------- Playful touches ---------- */
@@ -79,7 +79,6 @@ footer{position:relative;padding:95px max(5vw,30px) 24px;background:var(--ink);c
 .story-section::after{content:"";position:absolute;left:0;right:0;bottom:0;height:170px;background:url(img/scene-park.svg) repeat-x 0 100%/auto 170px;pointer-events:none}
 #recreation::after,#wellbeing::after{background-image:url(img/scene-hills.svg)}#places::after{background-image:url(img/scene-beach.svg)}
 
-.hero h1 em,.section-heading h2 em,.intro h2 em,.closing h2 em{text-decoration:underline wavy;text-decoration-color:color-mix(in srgb,currentColor 45%,transparent);text-decoration-thickness:4px;text-underline-offset:12px;text-decoration-skip-ink:none}
 
 
 .chart-no{box-shadow:0 0 0 4px #fff,0 4px 0 4px rgba(27,31,75,.12)}
@@ -110,7 +109,7 @@ footer{position:relative;padding:95px max(5vw,30px) 24px;background:var(--ink);c
 .intro{position:relative;background:var(--white);padding:100px max(5vw,30px) 90px;scroll-margin-top:78px}
 .intro-top{max-width:1340px;margin:0 auto}
 .intro h2{font-size:clamp(46px,5.4vw,78px);line-height:1.02;margin:0 0 26px}.intro h2 em{color:var(--blue)}
-.intro-text>p:not(.eyebrow){font-size:19px;line-height:1.65;color:#3F4366;max-width:820px}
+.intro-text>p:not(.eyebrow){font-size:19px;line-height:1.65;color:#3F4366;max-width:62ch}
 
 
 
