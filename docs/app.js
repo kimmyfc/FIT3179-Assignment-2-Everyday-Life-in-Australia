@@ -28,7 +28,7 @@ const charts = {
   'chart-library-programs': 'specs/08_library_programs_mekko.vl.json',
   'chart-culture-map': 'specs/09_culture_symbols.vl.json',
   'chart-cartogram': 'specs/10_volunteer_cartogram.vl.json',
-  'chart-hours': 'specs/11_volunteer_hours_treemap.vg.json',
+  'chart-hours': 'specs/11_volunteer_hours_bars.vl.json',
   'chart-trends': 'specs/12_participation_slope.vl.json',
   'chart-waffle': 'specs/13_loneliness_waffle.vl.json',
   'chart-trust': 'specs/14_trust_diverging.vl.json',

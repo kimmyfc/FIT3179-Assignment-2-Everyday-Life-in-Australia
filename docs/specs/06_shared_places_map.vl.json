@@ -2,43 +2,148 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Dot map of libraries, community centres and sports centres mapped in OpenStreetMap. Click a legend entry to highlight one type.",
   "width": "container",
-  "height": 420,
-  "projection": {"type": "conicEqualArea", "rotate": [-134, 0], "parallels": [-18, -36]},
+  "height": 600,
+  "projection": {
+    "type": "conicEqualArea",
+    "rotate": [
+      -134,
+      0
+    ],
+    "parallels": [
+      -18,
+      -36
+    ]
+  },
   "layer": [
     {
-      "data": {"url": "data/aus-states.geojson", "format": {"type": "json", "property": "features"}},
-      "mark": {"type": "geoshape", "fill": "#E3E9F4", "stroke": "#FFFFFF", "strokeWidth": 1.2}
+      "data": {
+        "url": "data/aus-states.geojson",
+        "format": {
+          "type": "json",
+          "property": "features"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#E3E9F4",
+        "stroke": "#FFFFFF",
+        "strokeWidth": 1.2
+      }
     },
     {
-      "data": {"url": "data/community_places.csv", "format": {"type": "csv", "parse": {"lat": "number", "lon": "number"}}},
+      "data": {
+        "url": "data/community_places.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "lat": "number",
+            "lon": "number"
+          }
+        }
+      },
       "params": [
-        {"name": "placeType", "select": {"type": "point", "fields": ["type"]}, "bind": "legend"}
+        {
+          "name": "placeType",
+          "select": {
+            "type": "point",
+            "fields": [
+              "type"
+            ]
+          },
+          "bind": "legend"
+        }
       ],
-      "mark": {"type": "circle", "size": 9, "stroke": null},
+      "mark": {
+        "type": "circle",
+        "size": 14,
+        "stroke": null
+      },
       "encoding": {
-        "longitude": {"field": "lon", "type": "quantitative"},
-        "latitude": {"field": "lat", "type": "quantitative"},
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
         "color": {
           "field": "type",
           "type": "nominal",
-          "scale": {"domain": ["Library", "Community centre", "Sports centre"], "range": ["#F76707", "#1C7ED6", "#7048E8"]},
-          "legend": {"orient": "bottom", "title": "Click a type to highlight it", "symbolOpacity": 1, "symbolSize": 90}
+          "scale": {
+            "domain": [
+              "Library",
+              "Community centre",
+              "Sports centre"
+            ],
+            "range": [
+              "#F76707",
+              "#1C7ED6",
+              "#7048E8"
+            ]
+          },
+          "legend": {
+            "orient": "bottom",
+            "title": "Click a type to highlight it",
+            "symbolOpacity": 1,
+            "symbolSize": 90
+          }
         },
-        "opacity": {"condition": {"param": "placeType", "value": 0.65}, "value": 0.04},
+        "opacity": {
+          "condition": {
+            "param": "placeType",
+            "value": 0.65
+          },
+          "value": 0.04
+        },
         "tooltip": [
-          {"field": "name", "title": "Name"},
-          {"field": "type", "title": "Type"}
+          {
+            "field": "name",
+            "title": "Name"
+          },
+          {
+            "field": "type",
+            "title": "Type"
+          }
         ]
       }
     },
     {
       "description": "Callouts on where places are and are not.",
-      "data": {"values": [
-        {"lon": 133, "lat": -24.5, "note": "Very few places across the interior"},
-        {"lon": 122, "lat": -38.5, "note": "Most sit in coastal cities"}
-      ]},
-      "mark": {"type": "text", "align": "center", "fontSize": 12, "fontStyle": "italic", "color": "#3F4366"},
-      "encoding": {"longitude": {"field": "lon", "type": "quantitative"}, "latitude": {"field": "lat", "type": "quantitative"}, "text": {"field": "note"}}
+      "data": {
+        "values": [
+          {
+            "lon": 133,
+            "lat": -24.5,
+            "note": "Very few places across the interior"
+          },
+          {
+            "lon": 122,
+            "lat": -38.5,
+            "note": "Most sit in coastal cities"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "fontSize": 12,
+        "fontStyle": "italic",
+        "color": "#3F4366"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "note"
+        }
+      }
     }
   ]
 }

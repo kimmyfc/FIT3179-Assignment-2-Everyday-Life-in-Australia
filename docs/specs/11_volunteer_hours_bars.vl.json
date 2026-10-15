@@ -1,0 +1,122 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Ordered bar chart of formal volunteers in Australia by annual hours volunteered. Bands run from fewest to most hours; bar length is the number of people.",
+  "data": {
+    "url": "data/volunteer_hours.json"
+  },
+  "transform": [
+    {
+      "joinaggregate": [
+        {
+          "op": "sum",
+          "field": "thousands",
+          "as": "total"
+        }
+      ]
+    },
+    {
+      "calculate": "datum.thousands / datum.total",
+      "as": "share"
+    },
+    {
+      "calculate": "format(datum.thousands / 1000, '.2f') + 'm · ' + format(datum.share, '.0%')",
+      "as": "label"
+    }
+  ],
+  "width": "container",
+  "height": 170,
+  "encoding": {
+    "y": {
+      "field": "band",
+      "type": "ordinal",
+      "sort": [
+        "1–20 hours",
+        "21–99 hours",
+        "100+ hours"
+      ],
+      "axis": {
+        "title": "Hours volunteered a year",
+        "labelFontSize": 13,
+        "labelColor": "#1B1F4B",
+        "labelFontWeight": "bold",
+        "titlePadding": 10
+      }
+    },
+    "x": {
+      "field": "thousands",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          0,
+          2600
+        ]
+      },
+      "axis": {
+        "title": "Volunteers (thousands)",
+        "tickCount": 5,
+        "format": ",.0f"
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "height": 34,
+        "cornerRadiusEnd": 4
+      },
+      "encoding": {
+        "color": {
+          "field": "band",
+          "type": "ordinal",
+          "scale": {
+            "domain": [
+              "1–20 hours",
+              "21–99 hours",
+              "100+ hours"
+            ],
+            "range": [
+              "#A5D8FF",
+              "#1C7ED6",
+              "#1B1F4B"
+            ]
+          },
+          "legend": null
+        },
+        "tooltip": [
+          {
+            "field": "band",
+            "title": "Annual hours"
+          },
+          {
+            "field": "thousands",
+            "type": "quantitative",
+            "title": "People ('000)",
+            "format": ",.1f"
+          },
+          {
+            "field": "share",
+            "type": "quantitative",
+            "title": "Share of volunteers",
+            "format": ".1%"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 6,
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "color": "#1B1F4B"
+      },
+      "encoding": {
+        "text": {
+          "field": "label"
+        }
+      }
+    }
+  ]
+}

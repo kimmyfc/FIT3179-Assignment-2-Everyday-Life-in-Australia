@@ -8,7 +8,7 @@ Author: Kimberley Carlile (33882959) · Last updated 14 October 2026
 
 ## Chart specifications
 
-Every chart is a standalone, human-readable JSON specification in [`docs/specs/`](docs/specs/). There are 16 charts in five sections, plus a small ACT inset for the activity map. All are Vega-Lite except the treemap, which uses Vega.
+Every chart is a standalone, human-readable JSON specification in [`docs/specs/`](docs/specs/). There are 16 charts in five sections, plus a small ACT inset for the activity map. All are Vega-Lite.
 
 | # | Chart | Idiom | Spec |
 |---|-------|-------|------|
@@ -22,7 +22,7 @@ Every chart is a standalone, human-readable JSON specification in [`docs/specs/`
 | 08 | Who goes to library programs? | Marimekko chart | [`08_library_programs_mekko.vl.json`](docs/specs/08_library_programs_mekko.vl.json) |
 | 09 | Who attends cultural events? | **Map:** proportional symbols | [`09_culture_symbols.vl.json`](docs/specs/09_culture_symbols.vl.json) |
 | 10 | Where do volunteers live? | **Map:** square cartogram | [`10_volunteer_cartogram.vl.json`](docs/specs/10_volunteer_cartogram.vl.json) |
-| 11 | Volunteering is a commitment | Treemap (Vega) | [`11_volunteer_hours_treemap.vg.json`](docs/specs/11_volunteer_hours_treemap.vg.json) |
+| 11 | Volunteering is a commitment | Ordered bar chart | [`11_volunteer_hours_bars.vl.json`](docs/specs/11_volunteer_hours_bars.vl.json) |
 | 12 | Is participation changing? | Slope chart | [`12_participation_slope.vl.json`](docs/specs/12_participation_slope.vl.json) |
 | 13 | Feeling lonely | Waffle chart | [`13_loneliness_waffle.vl.json`](docs/specs/13_loneliness_waffle.vl.json) |
 | 14 | How much do we trust? | Diverging stacked bars | [`14_trust_diverging.vl.json`](docs/specs/14_trust_diverging.vl.json) |

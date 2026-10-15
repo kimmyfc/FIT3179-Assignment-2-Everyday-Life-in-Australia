@@ -1,54 +1,465 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Marimekko chart of public library program participants in 2023–24. Column width shows each state's share of all participants; segment height shows the share by target audience within that state.",
-  "data": {"url": "data/library_programs.json"},
+  "description": "Marimekko chart of public library program participants in 2023–24. Column width shows each state's share of all participants; segment height shows the share by target audience within that state. The three smallest jurisdictions (TAS, NT, ACT) are repeated at equal width in a zoomed panel on the right so their audience mix can be read.",
+  "data": {
+    "url": "data/library_programs.json"
+  },
   "transform": [
-    {"joinaggregate": [{"op": "sum", "field": "participants", "as": "stateTotal"}], "groupby": ["state"]},
-    {"stack": "participants", "groupby": ["state"], "offset": "normalize", "sort": [{"field": "order", "order": "ascending"}], "as": ["y0", "y1"]},
-    {"stack": "participants", "groupby": [], "offset": "normalize", "sort": [{"field": "stateTotal", "order": "descending"}, {"field": "state", "order": "ascending"}, {"field": "order", "order": "ascending"}], "as": ["cx0", "cx1"]},
-    {"joinaggregate": [{"op": "min", "field": "cx0", "as": "x0"}, {"op": "max", "field": "cx1", "as": "x1"}], "groupby": ["state"]},
-    {"calculate": "(datum.x0 + datum.x1) / 2", "as": "xMid"},
-    {"calculate": "(datum.y0 + datum.y1) / 2", "as": "yMid"},
-    {"calculate": "datum.y1 - datum.y0", "as": "audienceShare"},
-    {"calculate": "datum.x1 - datum.x0", "as": "stateShare"}
+    {
+      "joinaggregate": [
+        {
+          "op": "sum",
+          "field": "participants",
+          "as": "stateTotal"
+        }
+      ],
+      "groupby": [
+        "state"
+      ]
+    },
+    {
+      "stack": "participants",
+      "groupby": [
+        "state"
+      ],
+      "offset": "normalize",
+      "sort": [
+        {
+          "field": "order",
+          "order": "ascending"
+        }
+      ],
+      "as": [
+        "y0",
+        "y1"
+      ]
+    },
+    {
+      "stack": "participants",
+      "groupby": [],
+      "offset": "normalize",
+      "sort": [
+        {
+          "field": "stateTotal",
+          "order": "descending"
+        },
+        {
+          "field": "state",
+          "order": "ascending"
+        },
+        {
+          "field": "order",
+          "order": "ascending"
+        }
+      ],
+      "as": [
+        "cx0",
+        "cx1"
+      ]
+    },
+    {
+      "joinaggregate": [
+        {
+          "op": "min",
+          "field": "cx0",
+          "as": "x0"
+        },
+        {
+          "op": "max",
+          "field": "cx1",
+          "as": "x1"
+        }
+      ],
+      "groupby": [
+        "state"
+      ]
+    },
+    {
+      "calculate": "(datum.x0 + datum.x1) / 2",
+      "as": "xMid"
+    },
+    {
+      "calculate": "(datum.y0 + datum.y1) / 2",
+      "as": "yMid"
+    },
+    {
+      "calculate": "datum.y1 - datum.y0",
+      "as": "audienceShare"
+    },
+    {
+      "calculate": "datum.x1 - datum.x0",
+      "as": "stateShare"
+    },
+    {
+      "calculate": "indexof(['TAS','NT','ACT'], datum.state)",
+      "as": "zoomIdx"
+    },
+    {
+      "calculate": "1.08 + datum.zoomIdx * 0.08",
+      "as": "zx0"
+    },
+    {
+      "calculate": "datum.zx0 + 0.07",
+      "as": "zx1"
+    },
+    {
+      "calculate": "(datum.zx0 + datum.zx1) / 2",
+      "as": "zxMid"
+    }
   ],
   "width": "container",
   "height": 320,
   "encoding": {
-    "x": {"field": "x0", "type": "quantitative", "scale": {"domain": [0, 1]}, "axis": {"title": "Share of all program participants in Australia →", "format": ".0%", "values": [0, 0.25, 0.5, 0.75, 1], "grid": false}},
-    "y": {"field": "y0", "type": "quantitative", "scale": {"domain": [0, 1], "reverse": true}, "axis": {"title": "Share within the state", "format": ".0%", "values": [0, 0.25, 0.5, 0.75, 1], "grid": false}}
+    "x": {
+      "field": "x0",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          0,
+          1.32
+        ]
+      },
+      "axis": {
+        "title": "Share of all program participants in Australia →",
+        "format": ".0%",
+        "values": [
+          0,
+          0.25,
+          0.5,
+          0.75,
+          1
+        ],
+        "grid": false,
+        "domain": false
+      }
+    },
+    "y": {
+      "field": "y0",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          0,
+          1
+        ],
+        "reverse": true
+      },
+      "axis": {
+        "title": "Share within the state",
+        "format": ".0%",
+        "values": [
+          0,
+          0.25,
+          0.5,
+          0.75,
+          1
+        ],
+        "grid": false
+      }
+    }
   },
   "layer": [
     {
-      "mark": {"type": "rect", "stroke": "#FFFFFF", "strokeWidth": 1.5},
+      "mark": {
+        "type": "rect",
+        "stroke": "#FFFFFF",
+        "strokeWidth": 1.5
+      },
       "encoding": {
-        "x2": {"field": "x1"},
-        "y2": {"field": "y1"},
+        "x2": {
+          "field": "x1"
+        },
+        "y2": {
+          "field": "y1"
+        },
         "color": {
           "field": "audience",
           "type": "nominal",
-          "sort": ["Early childhood", "Children", "Young adult", "Adults", "Seniors", "All ages"],
-          "scale": {"domain": ["Early childhood", "Children", "Young adult", "Adults", "Seniors", "All ages"], "range": ["#F76707", "#FCC419", "#15AABF", "#1C7ED6", "#7048E8", "#C5CBD9"]},
-          "legend": {"orient": "bottom", "title": null, "columns": 3, "symbolType": "square"}
+          "sort": [
+            "Early childhood",
+            "Children",
+            "Young adult",
+            "Adults",
+            "Seniors",
+            "All ages"
+          ],
+          "scale": {
+            "domain": [
+              "Early childhood",
+              "Children",
+              "Young adult",
+              "Adults",
+              "Seniors",
+              "All ages"
+            ],
+            "range": [
+              "#F76707",
+              "#FCC419",
+              "#15AABF",
+              "#1C7ED6",
+              "#7048E8",
+              "#C5CBD9"
+            ]
+          },
+          "legend": {
+            "orient": "bottom",
+            "title": null,
+            "columns": 3,
+            "symbolType": "square"
+          }
         },
         "tooltip": [
-          {"field": "state", "title": "Place"},
-          {"field": "audience", "title": "Audience"},
-          {"field": "participants", "type": "quantitative", "title": "Participants", "format": ",.0f"},
-          {"field": "audienceShare", "type": "quantitative", "title": "Share of state's participants", "format": ".0%"},
-          {"field": "stateShare", "type": "quantitative", "title": "State's share of Australia", "format": ".1%"}
+          {
+            "field": "state",
+            "title": "Place"
+          },
+          {
+            "field": "audience",
+            "title": "Audience"
+          },
+          {
+            "field": "participants",
+            "type": "quantitative",
+            "title": "Participants",
+            "format": ",.0f"
+          },
+          {
+            "field": "audienceShare",
+            "type": "quantitative",
+            "title": "Share of state's participants",
+            "format": ".0%"
+          },
+          {
+            "field": "stateShare",
+            "type": "quantitative",
+            "title": "State's share of Australia",
+            "format": ".1%"
+          }
         ]
       }
     },
     {
-      "transform": [{"filter": "datum.order === 0 && datum.stateShare > 0.035"}],
-      "mark": {"type": "text", "baseline": "bottom", "dy": -6, "fontWeight": "bold", "fontSize": 12, "color": "#1B1F4B"},
-      "encoding": {"x": {"field": "xMid", "type": "quantitative"}, "y": {"datum": 0}, "text": {"field": "state"}}
+      "transform": [
+        {
+          "filter": "datum.zoomIdx >= 0"
+        }
+      ],
+      "mark": {
+        "type": "rect",
+        "stroke": "#FFFFFF",
+        "strokeWidth": 1.5
+      },
+      "encoding": {
+        "x": {
+          "field": "zx0",
+          "type": "quantitative"
+        },
+        "x2": {
+          "field": "zx1"
+        },
+        "y2": {
+          "field": "y1"
+        },
+        "color": {
+          "field": "audience",
+          "type": "nominal",
+          "sort": [
+            "Early childhood",
+            "Children",
+            "Young adult",
+            "Adults",
+            "Seniors",
+            "All ages"
+          ],
+          "scale": {
+            "domain": [
+              "Early childhood",
+              "Children",
+              "Young adult",
+              "Adults",
+              "Seniors",
+              "All ages"
+            ],
+            "range": [
+              "#F76707",
+              "#FCC419",
+              "#15AABF",
+              "#1C7ED6",
+              "#7048E8",
+              "#C5CBD9"
+            ]
+          },
+          "legend": {
+            "orient": "bottom",
+            "title": null,
+            "columns": 3,
+            "symbolType": "square"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "state",
+            "title": "Place"
+          },
+          {
+            "field": "audience",
+            "title": "Audience"
+          },
+          {
+            "field": "participants",
+            "type": "quantitative",
+            "title": "Participants",
+            "format": ",.0f"
+          },
+          {
+            "field": "audienceShare",
+            "type": "quantitative",
+            "title": "Share of state's participants",
+            "format": ".0%"
+          },
+          {
+            "field": "stateShare",
+            "type": "quantitative",
+            "title": "State's share of Australia",
+            "format": ".1%"
+          }
+        ]
+      }
     },
     {
-      "transform": [{"filter": "datum.audienceShare > 0.12 && datum.stateShare > 0.07"}],
-      "mark": {"type": "text", "fontSize": 11, "color": "#FFFFFF", "fontWeight": "bold"},
-      "encoding": {"x": {"field": "xMid", "type": "quantitative"}, "y": {"field": "yMid", "type": "quantitative"}, "text": {"field": "audienceShare", "type": "quantitative", "format": ".0%"}}
+      "transform": [
+        {
+          "filter": "datum.order === 0 && datum.stateShare > 0.035"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "baseline": "bottom",
+        "dy": -6,
+        "fontWeight": "bold",
+        "fontSize": 12,
+        "color": "#1B1F4B"
+      },
+      "encoding": {
+        "x": {
+          "field": "xMid",
+          "type": "quantitative"
+        },
+        "y": {
+          "datum": 0
+        },
+        "text": {
+          "field": "state"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.audienceShare > 0.12 && datum.stateShare > 0.07"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 11,
+        "color": "#FFFFFF",
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "x": {
+          "field": "xMid",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "yMid",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "audienceShare",
+          "type": "quantitative",
+          "format": ".0%"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.zoomIdx >= 0 && datum.order === 0"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "baseline": "bottom",
+        "dy": -6,
+        "fontWeight": "bold",
+        "fontSize": 12,
+        "color": "#1B1F4B"
+      },
+      "encoding": {
+        "x": {
+          "field": "zxMid",
+          "type": "quantitative"
+        },
+        "y": {
+          "datum": 0
+        },
+        "text": {
+          "field": "state"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.zoomIdx >= 0 && datum.audienceShare > 0.12"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 10,
+        "color": "#FFFFFF",
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "x": {
+          "field": "zxMid",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "yMid",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "audienceShare",
+          "type": "quantitative",
+          "format": ".0%"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "baseline": "top",
+        "dy": 8,
+        "fontSize": 10,
+        "fontStyle": "italic",
+        "color": "#5C5F7A"
+      },
+      "encoding": {
+        "x": {
+          "datum": 1.195
+        },
+        "y": {
+          "datum": 1
+        },
+        "text": {
+          "value": "zoomed: 2.8% of all"
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.state === 'NT' && datum.order === 0"
+        }
+      ]
     }
   ]
 }
