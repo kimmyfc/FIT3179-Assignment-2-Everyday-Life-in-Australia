@@ -89,7 +89,7 @@ footer{position:relative;padding:95px max(5vw,30px) 24px;background:var(--ink);c
 /* Split cards: chart on one side, analysis as a speech bubble on the other; .flip swaps sides */
 .split-body{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:40px;align-items:center;margin-top:10px}
 .split-card.flip .split-body{grid-template-columns:minmax(0,1fr) minmax(0,1.6fr)}.split-card.flip .split-chart{order:2}
-.split-chart .chart{margin:0}
+.split-chart .chart{margin:0}.split-chart .chart.vega-embed{display:flex;justify-content:center}
 .split-body .annotation,.duo-analysis .annotation{position:relative;margin:0;border:0;border-radius:22px;padding:22px 24px;font-size:16px;line-height:1.65;background:color-mix(in srgb,var(--card) 13%,#fff)}
 .split-body .annotation::before{content:"";position:absolute;top:50%;left:-14px;margin-top:-14px;border:14px solid transparent;border-left:0;border-right-color:color-mix(in srgb,var(--card) 13%,#fff)}
 .split-card.flip .annotation::before{left:auto;right:-14px;border-right:0;border-left:14px solid color-mix(in srgb,var(--card) 13%,#fff)}
