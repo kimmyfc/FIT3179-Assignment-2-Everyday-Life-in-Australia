@@ -113,7 +113,7 @@ footer{position:relative;padding:95px max(5vw,30px) 24px;background:var(--ink);c
 
 
 
-.intro-sources{max-width:1340px;margin:40px auto 0;font-size:13px;color:var(--muted);line-height:1.6}.intro-sources span{display:inline-block;margin-right:10px;padding:3px 12px;border-radius:999px;background:var(--ink);color:#fff;font-weight:800;font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+
 
 /* Wide screens: show the side frames and inset the story between them */
 @media(min-width:1240px){.frame{display:block}main{margin:0 var(--frame-w);position:relative;z-index:2;box-shadow:0 0 0 6px var(--white),0 20px 60px rgba(27,31,75,.18)}}
