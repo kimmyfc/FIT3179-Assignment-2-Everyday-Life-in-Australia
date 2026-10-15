@@ -95,7 +95,7 @@
       "as": "zoomIdx"
     },
     {
-      "calculate": "1.08 + datum.zoomIdx * 0.08",
+      "calculate": "1.1 + datum.zoomIdx * 0.08",
       "as": "zx0"
     },
     {
@@ -116,7 +116,7 @@
       "scale": {
         "domain": [
           0,
-          1.32
+          1.36
         ]
       },
       "axis": {
@@ -235,6 +235,114 @@
             "format": ".1%"
           }
         ]
+      }
+    },
+    {
+      "description": "Shaded, dashed frame marks the zoomed panel as a separate magnified view.",
+      "transform": [
+        {
+          "filter": "datum.state === 'TAS' && datum.order === 0"
+        }
+      ],
+      "mark": {
+        "type": "rect",
+        "fill": "#F1F4FA",
+        "stroke": "#5C5F7A",
+        "strokeDash": [
+          4,
+          3
+        ],
+        "strokeWidth": 1.2,
+        "cornerRadius": 6
+      },
+      "encoding": {
+        "x": {
+          "datum": 1.08
+        },
+        "x2": {
+          "datum": 1.35
+        },
+        "y": {
+          "datum": -0.075
+        },
+        "y2": {
+          "datum": 1.075
+        }
+      }
+    },
+    {
+      "description": "Dashed box around the TAS, NT and ACT slivers, matching the zoom frame.",
+      "transform": [
+        {
+          "filter": "datum.zoomIdx >= 0 && datum.order === 0"
+        },
+        {
+          "aggregate": [
+            {
+              "op": "min",
+              "field": "x0",
+              "as": "bx0"
+            },
+            {
+              "op": "max",
+              "field": "x1",
+              "as": "bx1"
+            }
+          ]
+        }
+      ],
+      "mark": {
+        "type": "rect",
+        "fill": null,
+        "stroke": "#1B1F4B",
+        "strokeDash": [
+          4,
+          3
+        ],
+        "strokeWidth": 1.4
+      },
+      "encoding": {
+        "x": {
+          "field": "bx0",
+          "type": "quantitative"
+        },
+        "x2": {
+          "field": "bx1"
+        },
+        "y": {
+          "datum": -0.01
+        },
+        "y2": {
+          "datum": 1.01
+        }
+      }
+    },
+    {
+      "description": "Connector from the boxed slivers to the zoom frame.",
+      "transform": [
+        {
+          "filter": "datum.state === 'TAS' && datum.order === 0"
+        }
+      ],
+      "mark": {
+        "type": "rule",
+        "stroke": "#1B1F4B",
+        "strokeDash": [
+          4,
+          3
+        ],
+        "strokeWidth": 1.2
+      },
+      "encoding": {
+        "x": {
+          "datum": 1.003
+        },
+        "x2": {
+          "datum": 1.08
+        },
+        "y": {
+          "datum": 0.5
+        }
       }
     },
     {
@@ -439,14 +547,14 @@
       "mark": {
         "type": "text",
         "baseline": "top",
-        "dy": 8,
+        "dy": 30,
         "fontSize": 10,
         "fontStyle": "italic",
         "color": "#5C5F7A"
       },
       "encoding": {
         "x": {
-          "datum": 1.195
+          "datum": 1.215
         },
         "y": {
           "datum": 1
